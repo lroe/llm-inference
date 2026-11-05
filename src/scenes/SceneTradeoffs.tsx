@@ -8,18 +8,18 @@ export const SceneTradeoffs: React.FC<{durationInFrames: number}> = ({durationIn
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SketchRect x={260} y={360} w={560} h={280} rx={12} at={0.2} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4301} />
-        <SvgLabel x={540} y={410} size={38} color={C.cyan} at={0.2}>bigger batch</SvgLabel>
-        <SketchArrow x1={370} y1={500} x2={450} y2={460} at={1.2} dur={0.35} color={C.green} strokeWidth={4} />
-        <SvgLabel x={540} y={470} size={32} color={C.green} at={1.2}>throughput ↑</SvgLabel>
-        <SketchArrow x1={370} y1={560} x2={450} y2={600} at={1.5} dur={0.35} color={C.red} strokeWidth={4} />
-        <SvgLabel x={550} y={600} size={32} color={C.red} at={1.5}>waiting ↑</SvgLabel>
+        <SketchRect x={260} y={360} w={560} h={280} rx={12} at={0.5} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4301} />
+        <SvgLabel x={540} y={410} size={38} color={C.cyan} at={0.5}>bigger batch</SvgLabel>
+        <SketchArrow x1={370} y1={500} x2={450} y2={460} at={2.8} dur={0.35} color={C.green} strokeWidth={4} />
+        <SvgLabel x={540} y={470} size={32} color={C.green} at={2.8}>throughput ↑</SvgLabel>
+        <SketchArrow x1={370} y1={560} x2={450} y2={600} at={3.8} dur={0.35} color={C.red} strokeWidth={4} />
+        <SvgLabel x={550} y={600} size={32} color={C.red} at={3.8}>waiting ↑</SvgLabel>
 
-        <SketchRect x={1100} y={360} w={560} h={280} rx={12} at={0.7} dur={0.5} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4303} />
-        <SvgLabel x={1380} y={410} size={38} color={C.purple} at={0.7}>lower precision</SvgLabel>
-        <SketchArrow x1={1210} y1={500} x2={1290} y2={460} at={2.0} dur={0.35} color={C.green} strokeWidth={4} />
-        <SvgLabel x={1360} y={470} size={32} color={C.green} at={2.0}>speed ↑</SvgLabel>
-        <SvgLabel x={1380} y={590} size={32} color={C.yellow} at={2.2}>accuracy?</SvgLabel>
+        <SketchRect x={1100} y={360} w={560} h={280} rx={12} at={6.0} dur={0.5} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4303} />
+        <SvgLabel x={1380} y={410} size={38} color={C.purple} at={6.0}>lower precision</SvgLabel>
+        <SketchArrow x1={1210} y1={500} x2={1290} y2={460} at={9.5} dur={0.35} color={C.green} strokeWidth={4} />
+        <SvgLabel x={1360} y={470} size={32} color={C.green} at={9.5}>speed ↑</SvgLabel>
+        <SvgLabel x={1380} y={590} size={32} color={C.yellow} at={12.8}>accuracy?</SvgLabel>
 
         <SketchRect x={520} y={700} w={880} h={120} rx={12} at={15.0} dur={0.5} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4311} />
         <SvgLabel x={760} y={740} size={32} color={C.green} at={15.2}>throughput +30%</SvgLabel>

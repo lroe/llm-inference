@@ -28,9 +28,9 @@ export const SceneDataParallel: React.FC<{durationInFrames: number}> = ({duratio
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
         <g opacity={1 - trap}>
-          <Copy x={220} y={430} name="A" at={0.3} />
-          <Copy x={770} y={430} name="B" at={0.6} color={C.purple} />
-          <Copy x={1320} y={430} name="C" at={0.9} color={C.orange} />
+          <Copy x={220} y={430} name="A" at={0.5} />
+          <Copy x={770} y={430} name="B" at={2.0} color={C.purple} />
+          <Copy x={1320} y={430} name="C" at={3.5} color={C.orange} />
           {[410, 960, 1510].map((x, i) => (
             <React.Fragment key={x}>
               <Token x={x} y={340} text="req" size={30} color={C.green} fill={C.surface} at={4.0 + i * 0.2} dur={0.3} />
@@ -47,8 +47,8 @@ export const SceneDataParallel: React.FC<{durationInFrames: number}> = ({duratio
 
         <g opacity={trap}>
           <Copy x={220} y={430} name="A" at={0.3} />
-          <Copy x={770} y={430} name="B" at={0.6} color={C.purple} zero />
-          <Copy x={1320} y={430} name="C" at={0.9} color={C.orange} />
+          <Copy x={770} y={430} name="B" at={2.0} color={C.purple} zero />
+          <Copy x={1320} y={430} name="C" at={3.5} color={C.orange} />
           <Token x={420} y={340} text="turn 1" size={30} color={C.green} fill={C.surface} at={7.8} dur={0.3} />
           <SketchArrow x1={450} y1={372} x2={420} y2={422} at={8.2} dur={0.3} color={C.green} strokeWidth={4} head={11} />
           <Token x={960} y={330} text="turn 2" size={30} color={C.red} fill={C.surface} at={8.6} dur={0.3} />

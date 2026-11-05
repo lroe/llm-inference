@@ -25,10 +25,10 @@ export const SceneProfile: React.FC<{durationInFrames: number}> = ({durationInFr
         <Stopwatch x={1470} y={470} r={82} at={1.4} />
 
         <g>
-          <SketchRect x={680} y={760} w={400} h={84} rx={10} at={10.2} dur={0.4} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={3931} />
-          <SketchRect x={1160} y={760} w={400} h={84} rx={10} at={10.6} dur={0.4} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={3933} />
-          <SvgLabel x={880} y={802} size={30} color={C.muted} at={10.2}>big model → memory</SvgLabel>
-          <SvgLabel x={1360} y={802} size={30} color={C.muted} at={10.6}>GPUs talk → slow</SvgLabel>
+          <SketchRect x={680} y={760} w={400} h={84} rx={10} at={13.0} dur={0.4} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={3931} />
+          <SketchRect x={1160} y={760} w={400} h={84} rx={10} at={16.0} dur={0.4} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={3933} />
+          <SvgLabel x={880} y={802} size={30} color={C.muted} at={13.0}>big model → memory</SvgLabel>
+          <SvgLabel x={1360} y={802} size={30} color={C.muted} at={16.0}>GPUs talk → slow</SvgLabel>
         </g>
       </Canvas>
 

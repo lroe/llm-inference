@@ -26,14 +26,14 @@ export const SceneTensor: React.FC<{durationInFrames: number}> = ({durationInFra
         <g opacity={splitFade}>
           {[0, 1, 2, 3].map((i) => (
             <React.Fragment key={i}>
-              <SketchRect x={290 + i * 330} y={300} w={310} h={210} rx={10} at={5.0 + i * 0.08} dur={0.4} stroke={colors[i]} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2911 + i} />
+              <SketchRect x={290 + i * 330} y={300} w={310} h={210} rx={10} at={5.0 + i * 1.0} dur={0.4} stroke={colors[i]} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2911 + i} />
               {[0, 1, 2].map((f) => (
-                <SketchLine key={f} x1={312 + i * 330} y1={356 + f * 44} x2={578 + i * 330} y2={356 + f * 44} at={5.2 + i * 0.08 + f * 0.05} dur={0.3} stroke={C.panel} strokeWidth={3} seed={2920 + i * 3 + f} />
+                <SketchLine key={f} x1={312 + i * 330} y1={356 + f * 44} x2={578 + i * 330} y2={356 + f * 44} at={5.2 + i * 1.0 + f * 0.05} dur={0.3} stroke={C.panel} strokeWidth={3} seed={2920 + i * 3 + f} />
               ))}
-              <SvgLabel x={445 + i * 330} y={478} size={28} color={colors[i]} at={5.0 + i * 0.08}>¼ weights</SvgLabel>
-              <ChipDie x={290 + i * 330} y={560} w={310} h={200} cols={4} rows={3} lit={[0]} color={colors[i]} at={6.0 + i * 0.1} pins={false} stagger={0.1} />
-              <SketchArrow x1={445 + i * 330} y1={514} x2={445 + i * 330} y2={552} at={7.2 + i * 0.1} dur={0.3} color={colors[i]} strokeWidth={4} head={12} />
-              <SvgLabel x={445 + i * 330} y={738} size={26} color={colors[i]} at={6.2 + i * 0.1}>GPU</SvgLabel>
+              <SvgLabel x={445 + i * 330} y={478} size={28} color={colors[i]} at={5.0 + i * 1.0}>¼ weights</SvgLabel>
+              <ChipDie x={290 + i * 330} y={560} w={310} h={200} cols={4} rows={3} lit={[0]} color={colors[i]} at={6.0 + i * 1.0} pins={false} stagger={0.1} />
+              <SketchArrow x1={445 + i * 330} y1={514} x2={445 + i * 330} y2={552} at={7.0 + i * 1.0} dur={0.3} color={colors[i]} strokeWidth={4} head={12} />
+              <SvgLabel x={445 + i * 330} y={738} size={26} color={colors[i]} at={6.2 + i * 1.0}>GPU</SvgLabel>
             </React.Fragment>
           ))}
 

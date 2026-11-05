@@ -85,20 +85,20 @@ export const SceneHitRate: React.FC<{durationInFrames: number}> = ({durationInFr
         <SketchRect x={800} y={560} w={20} h={40} rx={3} at={3.8} dur={0.3} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={2} seed={4905} />
         <SvgLabel x={580} y={628} size={28} color={C.red} at={3.8}>2% uncached</SvgLabel>
 
-        <SketchRect x={1060} y={330} w={560} h={330} rx={12} at={3.6} dur={0.5} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4911} />
-        <SvgLabel x={1340} y={430} size={72} color={C.green} font="marker" at={3.6}>97%</SvgLabel>
-        <SvgLabel x={1340} y={500} size={32} color={C.muted} at={3.8}>cached</SvgLabel>
-        <SketchRect x={1120} y={560} w={420} h={40} rx={6} at={4.0} dur={0.4} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4913} />
-        <SketchRect x={1540} y={560} w={30} h={40} rx={3} at={4.2} dur={0.3} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={2} seed={4915} />
-        <SvgLabel x={1340} y={628} size={28} color={C.red} at={4.2}>3% uncached</SvgLabel>
+        <SketchRect x={1060} y={330} w={560} h={330} rx={12} at={5.0} dur={0.5} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4911} />
+        <SvgLabel x={1340} y={430} size={72} color={C.green} font="marker" at={5.0}>97%</SvgLabel>
+        <SvgLabel x={1340} y={500} size={32} color={C.muted} at={5.2}>cached</SvgLabel>
+        <SketchRect x={1120} y={560} w={420} h={40} rx={6} at={5.4} dur={0.4} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4913} />
+        <SketchRect x={1540} y={560} w={30} h={40} rx={3} at={5.6} dur={0.3} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={2} seed={4915} />
+        <SvgLabel x={1340} y={628} size={28} color={C.red} at={5.6}>3% uncached</SvgLabel>
 
-        <SketchArrow x1={830} y1={700} x2={1520} y2={700} at={6.0} dur={0.6} color={C.red} strokeWidth={5} />
-        <SvgLabel x={1175} y={748} size={36} color={C.red} at={6.0}>50% more uncached work</SvgLabel>
+        <SketchArrow x1={830} y1={700} x2={1520} y2={700} at={10.5} dur={0.6} color={C.red} strokeWidth={5} />
+        <SvgLabel x={1175} y={748} size={36} color={C.red} at={10.5}>50% more uncached work</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
         hit rate is not a dial
       </Label>
-      <Label x={960} y={820} size={38} color={C.yellow} at={11.0}>
+      <Label x={960} y={820} size={38} color={C.yellow} at={15.0}>
         watch the uncached work
       </Label>
     </SceneShell>

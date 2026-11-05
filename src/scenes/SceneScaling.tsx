@@ -18,9 +18,9 @@ export const SceneScaling: React.FC<{durationInFrames: number}> = ({durationInFr
         <SketchLine x1={360} y1={700} x2={1560} y2={700} at={0.3} dur={0.6} stroke={C.fg} strokeWidth={5} seed={3803} />
         {bars.map((b, i) => (
           <React.Fragment key={b.label}>
-            <SketchRect x={b.x} y={700 - b.h} w={120} h={b.h} at={0.6 + i * 0.5} dur={0.45} stroke={i === 3 ? C.orange : C.green} fill={i === 3 ? C.orange : C.green} fillStyle="solid" strokeWidth={3.5} seed={3810 + i} />
-            <SvgLabel x={b.x + 60} y={742} size={34} color={C.muted} at={0.6 + i * 0.5}>{b.label}</SvgLabel>
-            {b.add ? <SvgLabel x={b.x + 60} y={700 - b.h - 34} size={30} color={C.green} at={0.9 + i * 0.5}>{b.add}</SvgLabel> : null}
+            <SketchRect x={b.x} y={700 - b.h} w={120} h={b.h} at={0.6 + i * 1.2} dur={0.45} stroke={i === 3 ? C.orange : C.green} fill={i === 3 ? C.orange : C.green} fillStyle="solid" strokeWidth={3.5} seed={3810 + i} />
+            <SvgLabel x={b.x + 60} y={742} size={34} color={C.muted} at={0.6 + i * 1.2}>{b.label}</SvgLabel>
+            {b.add ? <SvgLabel x={b.x + 60} y={700 - b.h - 34} size={30} color={C.green} at={1.0 + i * 1.2}>{b.add}</SvgLabel> : null}
             {i < 3 ? <SketchArrow x1={b.x + 128} y1={684} x2={bars[i + 1].x - 10} y2={684} at={5.0 + i * 0.2} dur={0.3} color={C.cyan} strokeWidth={3.5} head={9} /> : null}
           </React.Fragment>
         ))}

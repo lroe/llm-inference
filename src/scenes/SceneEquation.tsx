@@ -53,12 +53,12 @@ export const SceneCeiling: React.FC<{durationInFrames: number}> = ({durationInFr
       <Canvas>
         <SketchLine x1={420} y1={320} x2={420} y2={720} at={0.2} dur={0.4} stroke={C.fg} strokeWidth={4} seed={4201} />
         <SketchLine x1={420} y1={720} x2={1420} y2={720} at={0.3} dur={0.4} stroke={C.fg} strokeWidth={4} seed={4203} />
-        <SketchRect x={560} y={620} w={160} h={100} rx={6} at={0.8} dur={0.4} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={3} seed={4211} />
-        <SvgLabel x={640} y={580} size={32} color={C.red} at={0.8}>best case 10%</SvgLabel>
-        <SketchRect x={980} y={440} w={160} h={280} rx={6} at={1.6} dur={0.5} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4213} />
-        <SvgLabel x={1060} y={400} size={32} color={C.green} at={1.6}>we need 40%</SvgLabel>
-        <SketchLine x1={700} y1={600} x2={980} y2={600} at={2.8} dur={0.4} stroke={C.yellow} strokeWidth={4} seed={4221} />
-        <SvgLabel x={840} y={558} size={30} color={C.yellow} at={2.8}>skip it</SvgLabel>
+        <SketchRect x={560} y={620} w={160} h={100} rx={6} at={2.0} dur={0.4} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={3} seed={4211} />
+        <SvgLabel x={640} y={580} size={32} color={C.red} at={2.0}>best case 10%</SvgLabel>
+        <SketchRect x={980} y={440} w={160} h={280} rx={6} at={4.0} dur={0.5} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4213} />
+        <SvgLabel x={1060} y={400} size={32} color={C.green} at={4.0}>we need 40%</SvgLabel>
+        <SketchLine x1={700} y1={600} x2={980} y2={600} at={5.0} dur={0.4} stroke={C.yellow} strokeWidth={4} seed={4221} />
+        <SvgLabel x={840} y={558} size={30} color={C.yellow} at={5.0}>skip it</SvgLabel>
 
         <SketchCircle cx={1510} cy={480} r={72} at={7.0} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={5} seed={4231} />
         <SketchLine x1={1510} y1={480} x2={1540} y2={440} at={7.4} dur={0.3} stroke={C.cyan} strokeWidth={5} seed={4233} />

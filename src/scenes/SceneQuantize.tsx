@@ -44,17 +44,17 @@ export const SceneSlowPath: React.FC<{durationInFrames: number}> = ({durationInF
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SketchRect x={280} y={340} w={620} h={340} rx={12} at={0.2} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5101} />
-        <SvgLabel x={590} y={400} size={36} color={C.cyan} at={0.2}>supports INT4</SvgLabel>
-        <SvgLabel x={590} y={470} size={56} color={C.green} at={0.4}>✓</SvgLabel>
+        <SketchRect x={280} y={340} w={620} h={340} rx={12} at={0.3} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5101} />
+        <SvgLabel x={590} y={400} size={36} color={C.cyan} at={0.3}>supports INT4</SvgLabel>
+        <SvgLabel x={590} y={470} size={56} color={C.green} at={0.5}>✓</SvgLabel>
         <Snail x={590} y={560} at={3.4} />
         <SvgLabel x={590} y={650} size={30} color={C.red} at={3.4}>but takes a slow path</SvgLabel>
 
-        <SketchRect x={1040} y={340} w={620} h={340} rx={12} at={0.6} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5111} />
-        <SvgLabel x={1350} y={400} size={36} color={C.yellow} at={0.6}>accuracy check</SvgLabel>
-        <SvgLabel x={1350} y={470} size={46} color={C.yellow} at={0.8}>?</SvgLabel>
-        <SketchLine x1={1120} y1={560} x2={1580} y2={560} at={5.0} dur={0.4} stroke={C.panel} strokeWidth={3} seed={5121} />
-        <SvgLabel x={1350} y={642} size={30} color={C.muted} at={5.0}>same answers?</SvgLabel>
+        <SketchRect x={1040} y={340} w={620} h={340} rx={12} at={5.0} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5111} />
+        <SvgLabel x={1350} y={400} size={36} color={C.yellow} at={5.0}>accuracy check</SvgLabel>
+        <SvgLabel x={1350} y={470} size={46} color={C.yellow} at={5.2}>?</SvgLabel>
+        <SketchLine x1={1120} y1={560} x2={1580} y2={560} at={6.0} dur={0.4} stroke={C.panel} strokeWidth={3} seed={5121} />
+        <SvgLabel x={1350} y={642} size={30} color={C.muted} at={6.0}>same answers?</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
         check both
@@ -62,7 +62,7 @@ export const SceneSlowPath: React.FC<{durationInFrames: number}> = ({durationInF
       <Label x={590} y={736} size={34} color={C.orange} at={7.0}>
         measure the speed
       </Label>
-      <Label x={1350} y={736} size={34} color={C.yellow} at={7.2}>
+      <Label x={1350} y={736} size={34} color={C.yellow} at={8.5}>
         measure the answers
       </Label>
     </SceneShell>

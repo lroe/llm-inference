@@ -123,11 +123,11 @@ export const SceneAccuracy: React.FC<{durationInFrames: number}> = ({durationInF
           <SvgLabel x={960} y={604} size={26} color={C.muted} at={0.7}>same answers</SvgLabel>
         </g>
         <ServerCard x={260} y={330} name="A" at={8.5} />
-        <ServerCard x={1260} y={330} name="B" at={8.7} />
-        <SketchRect x={760} y={360} w={400} h={160} rx={12} at={8.8} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6201} />
-        <SvgLabel x={960} y={405} size={30} color={C.yellow} at={8.8}>same tests</SvgLabel>
-        <SvgLabel x={960} y={460} size={30} color={C.yellow} at={9.0}>same day</SvgLabel>
-        <SvgLabel x={960} y={500} size={26} color={C.muted} at={9.2}>several skills</SvgLabel>
+        <ServerCard x={1260} y={330} name="B" at={9.5} />
+        <SketchRect x={760} y={360} w={400} h={160} rx={12} at={10.5} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6201} />
+        <SvgLabel x={960} y={405} size={30} color={C.yellow} at={10.5}>same tests</SvgLabel>
+        <SvgLabel x={960} y={460} size={30} color={C.yellow} at={10.7}>same day</SvgLabel>
+        <SvgLabel x={960} y={500} size={26} color={C.muted} at={10.9}>several skills</SvgLabel>
 
         <SketchLine x1={500} y1={760} x2={1420} y2={760} at={28.0} dur={0.5} stroke={C.fg} strokeWidth={4} seed={6211} />
         <SketchLine x1={500} y1={760} x2={500} y2={690} at={28.3} dur={0.3} stroke={C.fg} strokeWidth={4} seed={6213} />

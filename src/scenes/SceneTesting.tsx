@@ -51,14 +51,14 @@ export const SceneRepeat: React.FC<{durationInFrames: number}> = ({durationInFra
         ))}
         <SvgLabel x={570} y={680} size={40} color={C.red} at={7.5}>×8, then stops</SvgLabel>
 
-        <SketchRect x={1040} y={330} w={640} h={390} rx={12} at={0.6} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6421} />
-        <SvgLabel x={1360} y={382} size={30} color={C.yellow} at={0.6}>many turns</SvgLabel>
+        <SketchRect x={1040} y={330} w={640} h={390} rx={12} at={11.0} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6421} />
+        <SvgLabel x={1360} y={382} size={30} color={C.yellow} at={11.0}>many turns</SvgLabel>
         {[0, 1, 2, 3].map((i) => (
           <g key={i}>
-            <ChatBubble x={1120 + (i % 2) * 220} y={420 + i * 64} w={190} h={50} at={1.4 + i * 0.2} color={i === 0 ? C.red : C.yellow} fill={C.well} tail={i % 2 === 0 ? 'left' : 'right'}>
+            <ChatBubble x={1120 + (i % 2) * 220} y={420 + i * 64} w={190} h={50} at={11.4 + i * 0.2} color={i === 0 ? C.red : C.yellow} fill={C.well} tail={i % 2 === 0 ? 'left' : 'right'}>
               <SvgLabel x={1215 + (i % 2) * 220} y={445 + i * 64} size={24} color={i === 0 ? C.red : C.yellow}>turn {i + 1}</SvgLabel>
             </ChatBubble>
-            <SvgLabel x={1075} y={445 + i * 64} size={22} color={C.green} at={1.4 + i * 0.2}>shield</SvgLabel>
+            <SvgLabel x={1075} y={445 + i * 64} size={22} color={C.green} at={11.4 + i * 0.2}>shield</SvgLabel>
           </g>
         ))}
         <SvgLabel x={1360} y={690} size={26} color={C.muted} at={20.5}>test whole conversations</SvgLabel>
