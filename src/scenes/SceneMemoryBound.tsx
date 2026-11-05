@@ -17,10 +17,10 @@ const SpeedBar: React.FC<{
   number: string;
 }> = ({x, y, w, value, color, at, label, number}) => (
   <g>
-    <SvgLabel x={x - 30} y={y + 2} size={42} color={C.muted} anchor="end">{label}</SvgLabel>
+    <SvgLabel x={x - 30} y={y + 2} size={42} color={C.muted} anchor="end" at={at}>{label}</SvgLabel>
     <SketchRect x={x} y={y - 22} w={w} h={44} rx={8} at={at} dur={0.5} stroke={C.panel} fill={C.well} fillStyle="solid" strokeWidth={3} seed={1301 + y} />
     <SketchRect x={x} y={y - 22} w={w * value} h={44} rx={8} at={at + 0.2} dur={0.7} stroke={color} fill={color} fillStyle="solid" strokeWidth={3} seed={1302 + y} />
-    <SvgLabel x={x + w + 38} y={y + 2} size={46} color={color} anchor="start">{number}</SvgLabel>
+    <SvgLabel x={x + w + 38} y={y + 2} size={46} color={color} anchor="start" at={at + 0.2}>{number}</SvgLabel>
   </g>
 );
 
@@ -33,7 +33,7 @@ export const SceneMemoryBound: React.FC<{durationInFrames: number}> = ({duration
         <SpeedBar x={560} y={500} w={940} value={0.8} color={C.orange} at={1.4} label="measured" number="80 tok/s" />
 
         <SketchPath d="M 1312 552 L 1312 580 L 1500 580 L 1500 552" at={4.1} dur={0.5} stroke={C.yellow} strokeWidth={4} seed={1321} />
-        <SvgLabel x={1406} y={650} size={38} color={C.yellow}>the gap</SvgLabel>
+        <SvgLabel x={1406} y={650} size={38} color={C.yellow} at={4.1}>the gap</SvgLabel>
       </Canvas>
       <Label x={960} y={758} size={70} color={C.green} at={5.7} font="marker" weight={700}>
         memory bound

@@ -25,13 +25,13 @@ export const SceneHook: React.FC<{durationInFrames: number}> = ({durationInFrame
           <g transform="rotate(7 760 620)">
             <SketchRect x={640} y={600} w={236} h={112} rx={12} at={1.1} dur={0.5} stroke={C.orange} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={601} />
             <SketchCircle cx={674} cy={646} r={9} at={1.2} dur={0.3} stroke={C.orange} strokeWidth={3.5} seed={602} />
-            <SvgLabel x={790} y={656} size={54} color={C.orange}>$ 899</SvgLabel>
+            <SvgLabel x={790} y={656} size={54} color={C.orange} at={1.2}>$ 899</SvgLabel>
           </g>
 
           <SketchRect x={1110} y={268} w={620} h={510} rx={14} at={2.75} dur={0.65} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={605} />
           <Gauge x={1420} y={470} r={168} value={0.95} label="95%" color={C.orange} at={3.05} duration={1.3} size={62} />
           <SketchLine x1={1180} y1={690} x2={1660} y2={690} at={3.5} dur={0.5} stroke={C.panel} strokeWidth={4} seed={607} />
-          <SvgLabel x={1420} y={736} size={42} color={C.muted}>reported busy</SvgLabel>
+          <SvgLabel x={1420} y={736} size={42} color={C.muted} at={3.4}>reported busy</SvgLabel>
         </g>
 
         <g opacity={waitFade}>

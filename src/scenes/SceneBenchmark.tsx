@@ -1,33 +1,42 @@
 import React from 'react';
+import {interpolate, useCurrentFrame} from 'remotion';
 import {C} from '../theme';
 import {Canvas, SceneShell} from '../components/SceneShell';
 import {Label, SketchArrow, SketchCircle, SketchLine, SketchPath, SketchRect} from '../components/Sketch';
 import {ChatBubble, SvgLabel, Token} from '../components/Objects';
 
 export const SceneWorkload: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
+  const frame = useCurrentFrame();
+  const intro = 1 - interpolate(frame, [9.0 * 30, 9.6 * 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SketchRect x={220} y={330} w={400} h={300} rx={12} at={0.2} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5901} />
-        <SvgLabel x={420} y={382} size={30} color={C.cyan}>unique</SvgLabel>
-        <Token x={420} y={470} text="new" size={34} color={C.cyan} fill={C.well} at={1.0} dur={0.35} />
-        <SvgLabel x={420} y={570} size={26} color={C.muted}>starts from zero</SvgLabel>
+        <g opacity={intro}>
+          <SketchRect x={660} y={370} w={600} h={280} rx={14} at={0.2} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5900} />
+          <SvgLabel x={960} y={450} size={48} color={C.yellow} at={0.3}>benchmark</SvgLabel>
+          <SvgLabel x={960} y={550} size={72} color={C.muted} at={0.5}>?</SvgLabel>
+        </g>
 
-        <SketchRect x={760} y={330} w={400} h={300} rx={12} at={0.5} dur={0.5} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5903} />
-        <SvgLabel x={960} y={382} size={30} color={C.green}>shared prefix</SvgLabel>
-        <Token x={840} y={470} text="same" size={26} color={C.green} fill={C.well} at={1.4} dur={0.3} />
-        <Token x={960} y={470} text="same" size={26} color={C.green} fill={C.well} at={1.5} dur={0.3} />
-        <Token x={1080} y={470} text="diff" size={26} color={C.yellow} fill={C.well} at={1.6} dur={0.3} />
-        <SvgLabel x={960} y={570} size={26} color={C.muted}>cache absorbs the front</SvgLabel>
+        <SketchRect x={220} y={330} w={400} h={300} rx={12} at={9.8} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5901} />
+        <SvgLabel x={420} y={382} size={30} color={C.cyan} at={9.8}>unique</SvgLabel>
+        <Token x={420} y={470} text="new" size={34} color={C.cyan} fill={C.well} at={10.2} dur={0.35} />
+        <SvgLabel x={420} y={570} size={26} color={C.muted} at={10.2}>starts from zero</SvgLabel>
 
-        <SketchRect x={1300} y={330} w={400} h={300} rx={12} at={0.8} dur={0.5} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5905} />
-        <SvgLabel x={1500} y={382} size={30} color={C.red}>random</SvgLabel>
-        <SvgLabel x={1500} y={490} size={64} color={C.red}>?</SvgLabel>
-        <SvgLabel x={1500} y={570} size={26} color={C.muted}>traffic nobody has</SvgLabel>
+        <SketchRect x={760} y={330} w={400} h={300} rx={12} at={12.6} dur={0.5} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5903} />
+        <SvgLabel x={960} y={382} size={30} color={C.green} at={12.6}>shared prefix</SvgLabel>
+        <Token x={840} y={470} text="same" size={26} color={C.green} fill={C.well} at={13.0} dur={0.3} />
+        <Token x={960} y={470} text="same" size={26} color={C.green} fill={C.well} at={13.1} dur={0.3} />
+        <Token x={1080} y={470} text="diff" size={26} color={C.yellow} fill={C.well} at={13.2} dur={0.3} />
+        <SvgLabel x={960} y={570} size={26} color={C.muted} at={13.0}>cache absorbs the front</SvgLabel>
 
-        <SketchRect x={400} y={676} w={1120} h={92} rx={10} at={15.0} dur={0.4} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={5911} />
+        <SketchRect x={1300} y={330} w={400} h={300} rx={12} at={16.2} dur={0.5} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5905} />
+        <SvgLabel x={1500} y={382} size={30} color={C.red} at={16.2}>random</SvgLabel>
+        <SvgLabel x={1500} y={490} size={64} color={C.red} at={16.6}>?</SvgLabel>
+        <SvgLabel x={1500} y={570} size={26} color={C.muted} at={16.6}>traffic nobody has</SvgLabel>
+
+        <SketchRect x={400} y={676} w={1120} h={92} rx={10} at={20.0} dur={0.4} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={5911} />
         <SvgLabel x={640} y={722} size={30} color={C.muted} at={20.0}>replay real sessions</SvgLabel>
-        <SketchPath d="M 900 720 Q 980 680 1060 720" at={16.0} dur={0.4} stroke={C.green} strokeWidth={4} seed={5913} />
+        <SketchPath d="M 900 720 Q 980 680 1060 720" at={20.5} dur={0.4} stroke={C.green} strokeWidth={4} seed={5913} />
         <SvgLabel x={980} y={748} size={24} color={C.green} at={21.0}>in order</SvgLabel>
         <SvgLabel x={1240} y={722} size={28} color={C.red} at={26.0}>50 chats → fake hits</SvgLabel>
       </Canvas>
@@ -42,21 +51,21 @@ export const SceneLoadHeadline: React.FC<{durationInFrames: number}> = ({duratio
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SketchRect x={300} y={340} w={620} h={360} rx={12} at={0.2} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6001} />
-        <SvgLabel x={580} y={392} size={30} color={C.muted}>target vs actual</SvgLabel>
-        <SvgLabel x={360} y={460} size={28} color={C.muted} anchor="start">target</SvgLabel>
-        <SketchRect x={500} y={440} w={320} h={38} rx={5} at={0.8} dur={0.4} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6003} />
-        <SvgLabel x={870} y={460} size={28} color={C.green}>2000</SvgLabel>
-        <SvgLabel x={360} y={530} size={28} color={C.muted} anchor="start">actual</SvgLabel>
-        <SketchRect x={500} y={510} w={176} h={38} rx={5} at={1.4} dur={0.4} stroke={C.orange} fill={C.orange} fillStyle="solid" strokeWidth={3} seed={6005} />
-        <SvgLabel x={740} y={530} size={28} color={C.orange}>1100</SvgLabel>
-        <SvgLabel x={580} y={620} size={30} color={C.red}>the generator fell behind</SvgLabel>
+        <SketchRect x={300} y={340} w={620} h={360} rx={12} at={2.6} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6001} />
+        <SvgLabel x={580} y={392} size={30} color={C.muted} at={2.6}>target vs actual</SvgLabel>
+        <SvgLabel x={360} y={460} size={28} color={C.muted} anchor="start" at={3.0}>target</SvgLabel>
+        <SketchRect x={500} y={440} w={320} h={38} rx={5} at={3.0} dur={0.4} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6003} />
+        <SvgLabel x={870} y={460} size={28} color={C.green} at={3.2}>2000</SvgLabel>
+        <SvgLabel x={360} y={530} size={28} color={C.muted} anchor="start" at={3.6}>actual</SvgLabel>
+        <SketchRect x={500} y={510} w={176} h={38} rx={5} at={3.6} dur={0.4} stroke={C.orange} fill={C.orange} fillStyle="solid" strokeWidth={3} seed={6005} />
+        <SvgLabel x={740} y={530} size={28} color={C.orange} at={3.8}>1100</SvgLabel>
+        <SvgLabel x={580} y={620} size={30} color={C.red} at={6.2}>the generator fell behind</SvgLabel>
 
-        <SketchRect x={1050} y={340} w={570} h={360} rx={12} at={7.0} dur={0.5} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6011} />
-        <SketchCircle cx={1335} cy={500} r={96} at={7.4} dur={0.5} stroke={C.green} strokeWidth={22} seed={6013} />
-        <SvgLabel x={1335} y={490} size={64} color={C.green}>97%</SvgLabel>
-        <SvgLabel x={1335} y={550} size={26} color={C.muted}>input</SvgLabel>
-        <SvgLabel x={1335} y={640} size={28} color={C.muted}>mostly cache hits</SvgLabel>
+        <SketchRect x={1050} y={340} w={570} h={360} rx={12} at={14.0} dur={0.5} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6011} />
+        <SketchCircle cx={1335} cy={500} r={96} at={14.4} dur={0.5} stroke={C.green} strokeWidth={22} seed={6013} />
+        <SvgLabel x={1335} y={490} size={64} color={C.green} at={14.0}>97%</SvgLabel>
+        <SvgLabel x={1335} y={550} size={26} color={C.muted} at={14.2}>input</SvgLabel>
+        <SvgLabel x={1335} y={640} size={28} color={C.muted} at={14.4}>mostly cache hits</SvgLabel>
       </Canvas>
       <Label x={960} y={240} size={48} color={C.fg} at={0.3}>
         report both numbers
@@ -82,11 +91,11 @@ export const ScenePercentiles: React.FC<{durationInFrames: number}> = ({duration
         <SvgLabel x={820} y={480} size={26} color={C.red} anchor="end" at={3.0}>P99</SvgLabel>
         <SvgLabel x={590} y={716} size={30} color={C.red} at={3.2}>noisy on small samples</SvgLabel>
 
-        <SketchRect x={1030} y={330} w={600} h={370} rx={12} at={4.0} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6121} />
-        <SvgLabel x={1330} y={382} size={30} color={C.cyan} at={17.0}>one change at a time</SvgLabel>
-        <SketchLine x1={1100} y1={470} x2={1560} y2={470} at={5.0} dur={0.3} stroke={C.panel} strokeWidth={5} seed={6123} />
-        <SketchCircle cx={1440} cy={470} r={14} at={5.2} dur={0.2} stroke={C.cyan} fill={C.cyan} fillStyle="solid" strokeWidth={3} seed={6125} />
-        <SvgLabel x={1100} y={470} size={26} color={C.muted} anchor="end">batch</SvgLabel>
+        <SketchRect x={1030} y={330} w={600} h={370} rx={12} at={16.8} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6121} />
+        <SvgLabel x={1330} y={382} size={30} color={C.cyan} at={18.0}>one change at a time</SvgLabel>
+        <SketchLine x1={1100} y1={470} x2={1560} y2={470} at={17.0} dur={0.3} stroke={C.panel} strokeWidth={5} seed={6123} />
+        <SketchCircle cx={1440} cy={470} r={14} at={17.2} dur={0.2} stroke={C.cyan} fill={C.cyan} fillStyle="solid" strokeWidth={3} seed={6125} />
+        <SvgLabel x={1100} y={470} size={26} color={C.muted} anchor="end" at={17.0}>batch</SvgLabel>
         <SvgLabel x={1330} y={590} size={28} color={C.muted} at={22.0}>warm up · repeat · report spread</SvgLabel>
         <SvgLabel x={1330} y={640} size={28} color={C.muted} at={26.0}>read settings back</SvgLabel>
 
@@ -103,28 +112,35 @@ export const ScenePercentiles: React.FC<{durationInFrames: number}> = ({duration
 };
 
 export const SceneAccuracy: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
+  const frame = useCurrentFrame();
+  const intro = 1 - interpolate(frame, [8.0 * 30, 8.6 * 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <ServerCard x={260} y={330} name="A" at={0.2} />
-        <ServerCard x={1260} y={330} name="B" at={0.4} />
-        <SketchRect x={760} y={360} w={400} h={160} rx={12} at={5.0} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6201} />
-        <SvgLabel x={960} y={405} size={30} color={C.yellow} at={5.0}>same tests</SvgLabel>
-        <SvgLabel x={960} y={460} size={30} color={C.yellow} at={5.2}>same day</SvgLabel>
-        <SvgLabel x={960} y={500} size={26} color={C.muted} at={5.4}>several skills</SvgLabel>
+        <g opacity={intro}>
+          <SketchCircle cx={960} cy={480} r={96} at={0.4} dur={0.5} stroke={C.yellow} strokeWidth={5} seed={6200} />
+          <SvgLabel x={960} y={468} size={40} color={C.yellow} at={0.5}>accuracy?</SvgLabel>
+          <SvgLabel x={960} y={604} size={26} color={C.muted} at={0.7}>same answers</SvgLabel>
+        </g>
+        <ServerCard x={260} y={330} name="A" at={8.5} />
+        <ServerCard x={1260} y={330} name="B" at={8.7} />
+        <SketchRect x={760} y={360} w={400} h={160} rx={12} at={8.8} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={6201} />
+        <SvgLabel x={960} y={405} size={30} color={C.yellow} at={8.8}>same tests</SvgLabel>
+        <SvgLabel x={960} y={460} size={30} color={C.yellow} at={9.0}>same day</SvgLabel>
+        <SvgLabel x={960} y={500} size={26} color={C.muted} at={9.2}>several skills</SvgLabel>
 
-        <SketchLine x1={500} y1={760} x2={1420} y2={760} at={26.0} dur={0.5} stroke={C.fg} strokeWidth={4} seed={6211} />
-        <SketchLine x1={500} y1={760} x2={500} y2={690} at={26.3} dur={0.3} stroke={C.fg} strokeWidth={4} seed={6213} />
-        <SketchRect x={680} y={680} w={120} h={80} rx={5} at={27.0} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6215} />
-        <SketchRect x={980} y={700} w={120} h={60} rx={5} at={27.4} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6217} />
-        <SketchLine x1={740} y1={680} x2={740} y2={630} at={28.0} dur={0.3} stroke={C.yellow} strokeWidth={4} seed={6221} />
-        <SketchLine x1={740} y1={630} x2={820} y2={630} at={28.2} dur={0.2} stroke={C.yellow} strokeWidth={4} seed={6223} />
-        <SketchLine x1={1040} y1={700} x2={1040} y2={650} at={28.6} dur={0.3} stroke={C.yellow} strokeWidth={4} seed={6225} />
-        <SketchLine x1={1040} y1={650} x2={1120} y2={650} at={28.8} dur={0.2} stroke={C.yellow} strokeWidth={4} seed={6227} />
-        <SvgLabel x={960} y={820} size={34} color={C.yellow} at={26.0}>error bars overlap zero</SvgLabel>
+        <SketchLine x1={500} y1={760} x2={1420} y2={760} at={28.0} dur={0.5} stroke={C.fg} strokeWidth={4} seed={6211} />
+        <SketchLine x1={500} y1={760} x2={500} y2={690} at={28.3} dur={0.3} stroke={C.fg} strokeWidth={4} seed={6213} />
+        <SketchRect x={680} y={680} w={120} h={80} rx={5} at={28.5} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6215} />
+        <SketchRect x={980} y={700} w={120} h={60} rx={5} at={28.7} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={6217} />
+        <SketchLine x1={740} y1={680} x2={740} y2={630} at={29.0} dur={0.3} stroke={C.yellow} strokeWidth={4} seed={6221} />
+        <SketchLine x1={740} y1={630} x2={820} y2={630} at={29.2} dur={0.2} stroke={C.yellow} strokeWidth={4} seed={6223} />
+        <SketchLine x1={1040} y1={700} x2={1040} y2={650} at={29.4} dur={0.3} stroke={C.yellow} strokeWidth={4} seed={6225} />
+        <SketchLine x1={1040} y1={650} x2={1120} y2={650} at={29.6} dur={0.2} stroke={C.yellow} strokeWidth={4} seed={6227} />
+        <SvgLabel x={960} y={820} size={34} color={C.yellow} at={28.0}>error bars overlap zero</SvgLabel>
 
-        <SketchRect x={540} y={545} w={840} h={70} rx={10} at={37.0} dur={0.4} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={4} seed={6231} />
-        <SvgLabel x={960} y={583} size={34} color={C.green}>no measurable difference</SvgLabel>
+        <SketchRect x={540} y={545} w={840} h={70} rx={10} at={37.5} dur={0.4} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={4} seed={6231} />
+        <SvgLabel x={960} y={583} size={34} color={C.green} at={37.5}>no measurable difference</SvgLabel>
       </Canvas>
       <Label x={960} y={240} size={48} color={C.fg} at={0.3}>
         speed + accuracy

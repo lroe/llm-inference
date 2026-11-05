@@ -35,10 +35,10 @@ export const SceneSpeculative: React.FC<{durationInFrames: number}> = ({duration
         <Figure x={1640} y={820} scale={0.8} pose="stand" hat="chef" at={12.6} dur={0.7} />
         <SketchArrow x1={370} y1={660} x2={760} y2={500} at={10.2} dur={0.5} color={C.cyan} strokeWidth={4} />
         <SketchArrow x1={1540} y1={660} x2={1200} y2={500} at={13.6} dur={0.5} color={C.yellow} strokeWidth={4} />
-        <SvgLabel x={470} y={600} size={32} color={C.cyan}>draft</SvgLabel>
-        <SvgLabel x={1450} y={600} size={32} color={C.yellow}>verify</SvgLabel>
-        <SvgLabel x={280} y={858} size={28} color={C.muted}>prep cook</SvgLabel>
-        <SvgLabel x={1640} y={858} size={28} color={C.muted}>head chef</SvgLabel>
+        <SvgLabel x={470} y={600} size={32} color={C.cyan} at={10.2}>draft</SvgLabel>
+        <SvgLabel x={1450} y={600} size={32} color={C.yellow} at={13.6}>verify</SvgLabel>
+        <SvgLabel x={280} y={858} size={28} color={C.muted} at={9.0}>prep cook</SvgLabel>
+        <SvgLabel x={1640} y={858} size={28} color={C.muted} at={12.6}>head chef</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.cyan} at={0.3}>
         speculative decoding
@@ -50,6 +50,6 @@ export const SceneSpeculative: React.FC<{durationInFrames: number}> = ({duration
 const SketchPathLocal: React.FC<{at: number}> = ({at}) => (
   <g opacity={0.8}>
     <SketchLine x1={760} y1={480} x2={1280} y2={480} at={at} dur={0.4} stroke={C.yellow} strokeWidth={3} seed={5201} />
-    <SvgLabel x={1020} y={510} size={26} color={C.yellow}>one pass</SvgLabel>
+    <SvgLabel x={1020} y={510} size={26} color={C.yellow} at={16.8}>one pass</SvgLabel>
   </g>
 );

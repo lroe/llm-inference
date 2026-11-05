@@ -14,18 +14,18 @@ export const SceneBelowLimit: React.FC<{durationInFrames: number}> = ({durationI
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
         <SketchRect x={300} y={260} w={1320} h={320} rx={14} at={0.1} dur={0.6} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={1401} />
-        <SvgLabel x={530} y={362} size={38} color={C.muted} anchor="end">limit</SvgLabel>
+        <SvgLabel x={530} y={362} size={38} color={C.muted} anchor="end" at={0.4}>limit</SvgLabel>
         <SketchRect x={560} y={340} w={940} h={42} rx={8} at={0.4} dur={0.5} stroke={C.panel} fill={C.well} fillStyle="solid" strokeWidth={3} seed={1403} />
         <SketchRect x={560} y={340} w={940} h={42} rx={8} at={0.6} dur={0.6} stroke={C.muted} fill={C.muted} fillStyle="solid" strokeWidth={3} seed={1405} />
-        <SvgLabel x={1540} y={362} size={42} color={C.muted}>100</SvgLabel>
+        <SvgLabel x={1540} y={362} size={42} color={C.muted} at={0.6}>100</SvgLabel>
 
-        <SvgLabel x={530} y={456} size={38} color={C.muted} anchor="end">measured</SvgLabel>
+        <SvgLabel x={530} y={456} size={38} color={C.muted} anchor="end" at={1.1}>measured</SvgLabel>
         <SketchRect x={560} y={434} w={940} h={42} rx={8} at={1.1} dur={0.5} stroke={C.panel} fill={C.well} fillStyle="solid" strokeWidth={3} seed={1407} />
         <SketchRect x={560} y={434} w={141} h={42} rx={8} at={1.3} dur={0.6} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={3} seed={1409} />
-        <SvgLabel x={741} y={456} size={42} color={C.red}>15</SvgLabel>
+        <SvgLabel x={741} y={456} size={42} color={C.red} at={1.3}>15</SvgLabel>
 
         <SketchPath d="M 701 508 L 701 532 L 1500 532 L 1500 508" at={2.2} dur={0.5} stroke={C.yellow} strokeWidth={4} seed={1411} />
-        <SvgLabel x={1100} y={570} size={42} color={C.yellow}>10× gap</SvgLabel>
+        <SvgLabel x={1100} y={570} size={42} color={C.yellow} at={2.2}>10× gap</SvgLabel>
 
         <g opacity={roadFade}>
           <g transform="translate(960 740)">

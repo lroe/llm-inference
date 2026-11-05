@@ -17,14 +17,14 @@ export const ScenePipeline: React.FC<{durationInFrames: number}> = ({durationInF
         {[0, 1, 2, 3].map((i) => (
           <g key={i}>
             <SketchRect x={240 + i * 460} y={380} w={240} h={260} rx={10} at={0.3 + i * 0.35} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3101 + i} />
-            <SvgLabel x={360 + i * 460} y={352} size={32} color={C.muted}>GPU {i + 1}</SvgLabel>
+            <SvgLabel x={360 + i * 460} y={352} size={32} color={C.muted} at={0.3 + i * 0.35}>GPU {i + 1}</SvgLabel>
             {[0, 1, 2].map((f) => (
               <SketchRect key={f} x={266 + i * 460} y={412 + f * 70} w={188} h={54} rx={6} at={0.5 + i * 0.35 + f * 0.08} dur={0.3} stroke={C.panel} fill={C.well} fillStyle="solid" strokeWidth={3} seed={3120 + i * 3 + f} />
             ))}
             {i < 3 ? <SketchArrow x1={480 + i * 460} y1={510} x2={692 + i * 460} y2={510} at={10.2 + i * 0.15} dur={0.3} color={C.yellow} strokeWidth={4} head={11} /> : null}
           </g>
         ))}
-        <SvgLabel x={590} y={690} size={36} color={C.yellow}>small hand-off</SvgLabel>
+        <SvgLabel x={590} y={690} size={36} color={C.yellow} at={10.2}>small hand-off</SvgLabel>
 
         <SketchLine x1={240} y1={760} x2={1860} y2={760} at={1.0} dur={0.6} stroke={C.panel} strokeWidth={6} seed={3151} />
         {Array.from({length: 4}).map((_, i) => (

@@ -16,13 +16,13 @@ export const SceneTrap: React.FC<{durationInFrames: number}> = ({durationInFrame
         <g opacity={dim}>
           <Calendar x={400} y={360} at={0.2} />
 
-          <SvgLabel x={950} y={350} size={42} color={C.muted}>compress</SvgLabel>
+          <SvgLabel x={950} y={350} size={42} color={C.muted} at={0.5}>compress</SvgLabel>
           <QuantBlock x={820} y={490} size={150} label="16" color={C.orange} at={0.8} dur={0.5} />
           <SketchArrow x1={910} y1={490} x2={1035} y2={490} at={2.0} dur={0.5} color={C.muted} strokeWidth={4} />
           <QuantBlock x={1090} y={490} size={84} label="4" color={C.green} at={2.3} dur={0.45} />
 
           <Gauge x={1480} y={470} r={150} value={0.15} label="15" color={C.red} at={3.3} duration={1.0} size={54} />
-          <SvgLabel x={1480} y={706} size={42} color={C.red}>10× below limit</SvgLabel>
+          <SvgLabel x={1480} y={706} size={42} color={C.red} at={3.3}>10× below limit</SvgLabel>
         </g>
 
         <g opacity={stopFade}>

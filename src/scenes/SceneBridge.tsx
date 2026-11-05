@@ -28,7 +28,7 @@ export const SceneBridge: React.FC<{durationInFrames: number}> = ({durationInFra
         <Token x={1682} y={590} text="word" size={34} color={C.green} fill={C.surface} at={2.15} dur={0.4} />
 
         {/* equals + road */}
-        <SvgLabel x={960} y={590} size={104} color={C.yellow}>=</SvgLabel>
+        <SvgLabel x={960} y={590} size={104} color={C.yellow} at={2.7}>=</SvgLabel>
         {Array.from({length: 9}).map((_, i) => (
           <SketchLine key={i} x1={640 + i * 70} y1={800} x2={670 + i * 70} y2={800} at={2.4 + i * 0.04} dur={0.2} stroke={C.panel} strokeWidth={5} seed={1731 + i} />
         ))}

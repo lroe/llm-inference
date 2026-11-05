@@ -24,7 +24,7 @@ const SpaceToken: React.FC<{x: number; y: number; at: number}> = ({x, y, at}) =>
         strokeWidth={3.5}
         strokeDasharray="10 8"
       />
-      <SvgLabel x={x} y={y + 2} size={38} color={C.cyan}>␣</SvgLabel>
+      <SvgLabel x={x} y={y + 2} size={38} color={C.cyan} at={at + 0.2}>␣</SvgLabel>
     </g>
   );
 };
@@ -41,7 +41,7 @@ export const SceneTokens: React.FC<{durationInFrames: number}> = ({durationInFra
         <LabelTokenRow />
         <SpaceToken x={1219} y={420} at={3.1} />
         <g opacity={spaceFade}>
-          <SvgLabel x={1219} y={338} size={38} color={C.cyan}>a space</SvgLabel>
+          <SvgLabel x={1219} y={338} size={38} color={C.cyan} at={3.1}>a space</SvgLabel>
         </g>
 
         {/* bracket under “fast” */}
@@ -53,7 +53,7 @@ export const SceneTokens: React.FC<{durationInFrames: number}> = ({durationInFra
           strokeWidth={4}
           seed={951}
         />
-        <SvgLabel x={1104} y={568} size={52} color={C.yellow}>≈ 4 letters</SvgLabel>
+        <SvgLabel x={1104} y={568} size={52} color={C.yellow} at={5.9}>≈ 4 letters</SvgLabel>
 
         {/* 3/4 word bar */}
         <g>
@@ -75,7 +75,7 @@ export const SceneTokens: React.FC<{durationInFrames: number}> = ({durationInFra
             />
           ))}
         </g>
-        <SvgLabel x={1260} y={762} size={48} color={C.green}>3/4 of a word</SvgLabel>
+        <SvgLabel x={1260} y={762} size={48} color={C.green} at={6.3}>3/4 of a word</SvgLabel>
       </Canvas>
 
       <Label x={960} y={262} size={52} color={C.fg} at={0.3}>

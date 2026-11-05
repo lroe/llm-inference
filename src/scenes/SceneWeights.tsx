@@ -68,7 +68,7 @@ export const SceneWeights: React.FC<{durationInFrames: number}> = ({durationInFr
           <SketchLine x1={1348} y1={380} x2={1452} y2={440} at={2.4} dur={0.4} stroke={C.cyan} strokeWidth={5} seed={913} />
           <SketchLine x1={1452} y1={380} x2={1348} y2={440} at={2.45} dur={0.4} stroke={C.cyan} strokeWidth={5} seed={915} />
           <SketchCircle cx={1400} cy={410} r={56} at={2.3} dur={0.5} stroke={C.cyan} strokeWidth={4} seed={917} />
-          <SvgLabel x={1400} y={500} size={44} color={C.cyan}>frozen</SvgLabel>
+          <SvgLabel x={1400} y={500} size={44} color={C.cyan} at={2.5}>frozen</SvgLabel>
         </g>
 
         <g opacity={serveFade}>

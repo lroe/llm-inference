@@ -52,17 +52,17 @@ export const SceneIdleChip: React.FC<{durationInFrames: number}> = ({durationInF
             })
           )}
 
-          <SvgLabel x={960} y={312} size={34} color={C.orange}>1 of 48</SvgLabel>
+          <SvgLabel x={960} y={312} size={34} color={C.orange} at={1.0}>1 of 48</SvgLabel>
         </g>
 
         <g opacity={fixFade}>
           <SketchRect x={1540} y={660} w={110} h={110} rx={8} at={5.5} dur={0.4} stroke={C.orange} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={1561} />
           <SketchRect x={1600} y={730} w={54} h={54} rx={5} at={5.7} dur={0.3} stroke={C.orange} fill={C.panel} fillStyle="solid" strokeWidth={3} seed={1563} />
-          <SvgLabel x={1595} y={715} size={30} color={C.orange}>16</SvgLabel>
-          <SvgLabel x={1627} y={757} size={22} color={C.orange}>4</SvgLabel>
+          <SvgLabel x={1595} y={715} size={30} color={C.orange} at={5.5}>16</SvgLabel>
+          <SvgLabel x={1627} y={757} size={22} color={C.orange} at={5.7}>4</SvgLabel>
           <SketchLine x1={1500} y1={650} x2={1690} y2={800} at={6.0} dur={0.3} stroke={C.red} strokeWidth={7} seed={1565} />
           <SketchLine x1={1690} y1={650} x2={1500} y2={800} at={6.05} dur={0.3} stroke={C.red} strokeWidth={7} seed={1567} />
-          <SvgLabel x={1595} y={840} size={36} color={C.red}>not the fix</SvgLabel>
+          <SvgLabel x={1595} y={840} size={36} color={C.red} at={6.0}>not the fix</SvgLabel>
         </g>
       </Canvas>
 

@@ -45,23 +45,23 @@ export const SceneGraph: React.FC<{durationInFrames: number}> = ({durationInFram
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
         <SketchRect x={300} y={350} w={560} h={360} rx={12} at={0.2} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5601} />
-        <SvgLabel x={580} y={402} size={34} color={C.yellow}>recipe card</SvgLabel>
+        <SvgLabel x={580} y={402} size={34} color={C.yellow} at={0.2}>recipe card</SvgLabel>
         {['chop', 'stir', 'salt'].map((s, i) => (
           <React.Fragment key={s}>
             <SketchRect x={340} y={450 + i * 78} w={480} h={54} rx={6} at={0.6 + i * 0.2} dur={0.3} stroke={C.panel} fill={C.well} fillStyle="solid" strokeWidth={3} seed={5610 + i} />
-            <SvgLabel x={580} y={480 + i * 78} size={28} color={C.muted}>{s}</SvgLabel>
+            <SvgLabel x={580} y={480 + i * 78} size={28} color={C.muted} at={0.6 + i * 0.2}>{s}</SvgLabel>
           </React.Fragment>
         ))}
         <SketchCircle cx={930} cy={430} r={34} at={4.0} dur={0.4} stroke={C.red} fill={C.red} fillStyle="solid" strokeWidth={4} seed={5621} />
-        <SvgLabel x={930} y={492} size={26} color={C.red}>record</SvgLabel>
+        <SvgLabel x={930} y={492} size={26} color={C.red} at={4.0}>record</SvgLabel>
         <SketchArrow x1={900} y1={560} x2={1120} y2={560} at={5.0} dur={0.4} color={C.green} strokeWidth={4} />
-        <SvgLabel x={1010} y={522} size={26} color={C.green}>replay</SvgLabel>
+        <SvgLabel x={1010} y={522} size={26} color={C.green} at={5.0}>replay</SvgLabel>
 
         <SketchRect x={1160} y={400} w={460} h={260} rx={12} at={7.0} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5631} />
-        <SvgLabel x={1390} y={452} size={32} color={C.muted}>server setting</SvgLabel>
+        <SvgLabel x={1390} y={452} size={32} color={C.muted} at={7.0}>server setting</SvgLabel>
         <SketchLine x1={1240} y1={540} x2={1540} y2={540} at={7.6} dur={0.3} stroke={C.panel} strokeWidth={5} seed={5633} />
         <SketchCircle cx={1500} cy={540} r={22} at={8.0} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={4} seed={5635} />
-        <SvgLabel x={1330} y={500} size={30} color={C.green}>graph ON</SvgLabel>
+        <SvgLabel x={1330} y={500} size={30} color={C.green} at={8.0}>graph ON</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.green} at={0.3}>
         graph capture

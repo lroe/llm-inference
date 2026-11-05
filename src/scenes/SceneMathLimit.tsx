@@ -21,13 +21,13 @@ export const SceneMathLimit: React.FC<{durationInFrames: number}> = ({durationIn
           {[0, 1, 2].map((i) => (
             <SketchRect key={i} x={860 + i * 120} y={426} w={48} h={48} rx={6} at={2.0 + i * 0.12} dur={0.3} stroke={C.orange} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={1111 + i} />
           ))}
-          <SvgLabel x={884} y={450} size={30} color={C.orange}>B</SvgLabel>
-          <SvgLabel x={1004} y={450} size={30} color={C.orange}>B</SvgLabel>
-          <SvgLabel x={1124} y={450} size={30} color={C.orange}>B</SvgLabel>
+          <SvgLabel x={884} y={450} size={30} color={C.orange} at={2.0}>B</SvgLabel>
+          <SvgLabel x={1004} y={450} size={30} color={C.orange} at={2.12}>B</SvgLabel>
+          <SvgLabel x={1124} y={450} size={30} color={C.orange} at={2.24}>B</SvgLabel>
 
           <SketchPath d="M 740 576 L 740 602 L 1180 602 L 1180 576" at={4.0} dur={0.6} stroke={C.cyan} strokeWidth={4} seed={1121} />
-          <SvgLabel x={960} y={650} size={82} color={C.cyan}>b</SvgLabel>
-          <SvgLabel x={960} y={718} size={38} color={C.muted}>bytes per second</SvgLabel>
+          <SvgLabel x={960} y={650} size={82} color={C.cyan} at={4.0}>b</SvgLabel>
+          <SvgLabel x={960} y={718} size={38} color={C.muted} at={4.2}>bytes per second</SvgLabel>
         </g>
       </Canvas>
       <Label x={960} y={248} size={50} color={C.fg} at={0.3}>

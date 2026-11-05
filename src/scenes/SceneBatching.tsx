@@ -12,13 +12,13 @@ export const SceneBatching: React.FC<{durationInFrames: number}> = ({durationInF
         <MemoryStack x={250} y={390} w={92} h={250} label="MEMORY" color={C.orange} at={0.2} dur={0.8} />
         <Chip x={740} y={380} size={260} label="GPU" color={C.cyan} at={0.6} dur={0.8} active />
         <SketchArrow x1={372} y1={520} x2={710} y2={520} at={1.4} dur={0.6} color={C.orange} strokeWidth={5} />
-        <SvgLabel x={540} y={468} size={40} color={C.orange}>1 read</SvgLabel>
+        <SvgLabel x={540} y={468} size={40} color={C.orange} at={1.4}>1 read</SvgLabel>
         <SketchArrow x1={1032} y1={520} x2={1220} y2={520} at={4.9} dur={0.55} color={C.green} strokeWidth={5} />
-        <SvgLabel x={1125} y={468} size={40} color={C.green}>50 users</SvgLabel>
+        <SvgLabel x={1125} y={468} size={40} color={C.green} at={4.9}>50 users</SvgLabel>
 
         <SketchRect x={1240} y={360} w={440} h={340} rx={14} at={3.9} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2301} />
         <AvatarGrid at={5.2} />
-        <SvgLabel x={1470} y={748} size={56} color={C.yellow}>×50</SvgLabel>
+        <SvgLabel x={1470} y={748} size={56} color={C.yellow} at={8.5}>×50</SvgLabel>
       </Canvas>
 
       <Label x={960} y={250} size={54} color={C.fg} at={0.4}>
@@ -74,7 +74,7 @@ export const SceneSingleUser: React.FC<{durationInFrames: number}> = ({durationI
           <MemoryStack x={1480} y={410} w={90} h={250} label="MEMORY" color={C.orange} at={0.35} dur={0.7} />
           <SketchArrow x1={1450} y1={590} x2={1340} y2={590} at={1.0} dur={0.35} color={C.red} strokeWidth={5} />
           <SketchLine x1={1315} y1={520} x2={1315} y2={660} at={1.4} dur={0.3} stroke={C.red} strokeWidth={7} seed={2401} />
-          <SvgLabel x={1378} y={512} size={38} color={C.red}>memory limit</SvgLabel>
+          <SvgLabel x={1378} y={512} size={38} color={C.red} at={1.4}>memory limit</SvgLabel>
         </g>
       </Canvas>
       <Label x={700} y={790} size={54} color={C.red} at={2.8} font="marker" weight={700}>

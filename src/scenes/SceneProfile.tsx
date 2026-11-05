@@ -18,7 +18,7 @@ export const SceneProfile: React.FC<{durationInFrames: number}> = ({durationInFr
         <SketchRect x={260} y={300} w={1080} h={400} rx={14} at={0.2} dur={0.5} stroke={C.fg} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3901} />
         {rows.map((r, i) => (
           <React.Fragment key={r.name}>
-            <SvgLabel x={400} y={358 + i * 60} size={30} color={C.muted} anchor="end">{r.name}</SvgLabel>
+            <SvgLabel x={400} y={358 + i * 60} size={30} color={C.muted} anchor="end" at={0.5 + i * 0.15}>{r.name}</SvgLabel>
             <SketchRect x={430} y={340 + i * 60} w={r.w} h={34} rx={4} at={0.5 + i * 0.15} dur={0.4} stroke={r.color} fill={r.color} fillStyle="solid" strokeWidth={3} seed={3910 + i} />
           </React.Fragment>
         ))}
@@ -44,6 +44,6 @@ const Stopwatch: React.FC<{x: number; y: number; r: number; at: number}> = ({x, 
     <SketchCircle cx={x} cy={y} r={r} at={at} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={5} seed={3951} />
     <SketchCircle cx={x} cy={y - r - 16} r={12} at={at + 0.3} dur={0.2} stroke={C.cyan} strokeWidth={4} seed={3953} />
     <SketchLine x1={x} y1={y} x2={x + 40} y2={y - 44} at={at + 0.5} dur={0.3} stroke={C.cyan} strokeWidth={5} seed={3955} />
-    <SvgLabel x={x} y={y + r + 36} size={30} color={C.muted}>where the time goes</SvgLabel>
+    <SvgLabel x={x} y={y + r + 36} size={30} color={C.muted} at={at + 0.4}>where the time goes</SvgLabel>
   </g>
 );

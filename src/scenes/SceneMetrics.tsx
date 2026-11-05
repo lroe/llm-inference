@@ -18,16 +18,16 @@ export const SceneMetrics: React.FC<{durationInFrames: number}> = ({durationInFr
         ))}
 
         <SketchPath d="M 300 486 L 300 510 L 900 510 L 900 486" at={1.7} dur={0.5} stroke={C.cyan} strokeWidth={4} seed={2611} />
-        <SvgLabel x={600} y={566} size={42} color={C.cyan}>time to first token</SvgLabel>
+        <SvgLabel x={600} y={566} size={42} color={C.cyan} at={1.7}>time to first token</SvgLabel>
 
         <SketchPath d="M 900 486 L 900 510 L 1500 510 L 1500 486" at={8.4} dur={0.5} stroke={C.green} strokeWidth={4} seed={2613} />
-        <SvgLabel x={1200} y={566} size={42} color={C.green}>per output token</SvgLabel>
+        <SvgLabel x={1200} y={566} size={42} color={C.green} at={8.4}>per output token</SvgLabel>
 
         {[420, 612, 804, 996, 1188, 1380].map((x, i) => (
           <Table key={x} x={x} y={748} at={14.1 + i * 0.1} />
         ))}
-        <SvgLabel x={960} y={676} size={44} color={C.yellow}>throughput</SvgLabel>
-        <SvgLabel x={960} y={824} size={40} color={C.muted}>tokens / second, all users</SvgLabel>
+        <SvgLabel x={960} y={676} size={44} color={C.yellow} at={14.1}>throughput</SvgLabel>
+        <SvgLabel x={960} y={824} size={40} color={C.muted} at={14.3}>tokens / second, all users</SvgLabel>
       </Canvas>
 
       <Label x={960} y={210} size={46} color={C.muted} at={0.3}>

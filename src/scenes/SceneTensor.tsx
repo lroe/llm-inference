@@ -20,7 +20,7 @@ export const SceneTensor: React.FC<{durationInFrames: number}> = ({durationInFra
           ))}
           <ChipDie x={800} y={520} w={320} h={280} lit={[]} color={C.red} at={0.5} pins={false} />
           <SketchArrow x1={960} y1={456} x2={960} y2={510} at={1.2} dur={0.35} color={C.red} strokeWidth={5} />
-          <SvgLabel x={960} y={230} size={46} color={C.red}>too big for one GPU</SvgLabel>
+          <SvgLabel x={960} y={230} size={46} color={C.red} at={0.4}>too big for one GPU</SvgLabel>
         </g>
 
         <g opacity={splitFade}>
@@ -30,10 +30,10 @@ export const SceneTensor: React.FC<{durationInFrames: number}> = ({durationInFra
               {[0, 1, 2].map((f) => (
                 <SketchLine key={f} x1={312 + i * 330} y1={356 + f * 44} x2={578 + i * 330} y2={356 + f * 44} at={5.2 + i * 0.08 + f * 0.05} dur={0.3} stroke={C.panel} strokeWidth={3} seed={2920 + i * 3 + f} />
               ))}
-              <SvgLabel x={445 + i * 330} y={478} size={28} color={colors[i]}>¼ weights</SvgLabel>
+              <SvgLabel x={445 + i * 330} y={478} size={28} color={colors[i]} at={5.0 + i * 0.08}>¼ weights</SvgLabel>
               <ChipDie x={290 + i * 330} y={560} w={310} h={200} cols={4} rows={3} lit={[0]} color={colors[i]} at={6.0 + i * 0.1} pins={false} stagger={0.1} />
               <SketchArrow x1={445 + i * 330} y1={514} x2={445 + i * 330} y2={552} at={7.2 + i * 0.1} dur={0.3} color={colors[i]} strokeWidth={4} head={12} />
-              <SvgLabel x={445 + i * 330} y={738} size={26} color={colors[i]}>GPU</SvgLabel>
+              <SvgLabel x={445 + i * 330} y={738} size={26} color={colors[i]} at={6.2 + i * 0.1}>GPU</SvgLabel>
             </React.Fragment>
           ))}
 
@@ -45,7 +45,7 @@ export const SceneTensor: React.FC<{durationInFrames: number}> = ({durationInFra
           {[445, 775, 1105, 1435].map((x) => (
             <SketchLine key={x} x1={x} y1={760} x2={x} y2={812} at={22.8} dur={0.2} stroke={C.red} strokeWidth={3} seed={2971 + x} />
           ))}
-          <SvgLabel x={960} y={854} size={36} color={C.red}>share results, twice per layer</SvgLabel>
+          <SvgLabel x={960} y={854} size={36} color={C.red} at={22.5}>share results, twice per layer</SvgLabel>
         </g>
       </Canvas>
 

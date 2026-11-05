@@ -27,7 +27,7 @@ export const SceneDecode: React.FC<{durationInFrames: number}> = ({durationInFra
               ) : null}
             </React.Fragment>
           ))}
-          <SvgLabel x={1420} y={748} size={38} color={C.muted}>one at a time</SvgLabel>
+          <SvgLabel x={1420} y={748} size={38} color={C.muted} at={5.2}>one at a time</SvgLabel>
         </g>
 
         <g opacity={fork}>

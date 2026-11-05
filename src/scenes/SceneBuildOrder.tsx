@@ -23,8 +23,8 @@ export const SceneBuildOrder: React.FC<{durationInFrames: number}> = ({durationI
           </React.Fragment>
         ))}
         <SketchArrow x1={300} y1={340} x2={300} y2={700} at={2.0} dur={0.5} color={C.green} strokeWidth={4} />
-        <SvgLabel x={200} y={320} size={30} color={C.green}>high payoff</SvgLabel>
-        <SvgLabel x={200} y={700} size={30} color={C.red}>low payoff</SvgLabel>
+        <SvgLabel x={200} y={320} size={30} color={C.green} at={2.0}>high payoff</SvgLabel>
+        <SvgLabel x={200} y={700} size={30} color={C.red} at={2.2}>low payoff</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={48} color={C.fg} at={0.3}>
         build order

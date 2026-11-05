@@ -16,7 +16,7 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
         <SketchRect x={870} y={366} w={180} h={74} rx={10} at={0.3} dur={0.4} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3401} />
-        <SvgLabel x={960} y={404} size={30} color={C.purple}>router</SvgLabel>
+        <SvgLabel x={960} y={404} size={30} color={C.purple} at={0.3}>router</SvgLabel>
         <Token x={960} y={308} text="token" size={30} color={C.cyan} fill={C.surface} at={0.8} dur={0.35} />
 
         {gpus.map((x, i) => {
@@ -24,13 +24,13 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
           return (
             <React.Fragment key={x}>
               <SketchRect x={x} y={470} w={320} h={200} rx={10} at={0.5 + i * 0.12} dur={0.4} stroke={hot ? C.purple : C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3410 + i} />
-              <SvgLabel x={x + 160} y={502} size={30} color={hot ? C.purple : C.muted}>GPU {i + 1}</SvgLabel>
+              <SvgLabel x={x + 160} y={502} size={30} color={hot ? C.purple : C.muted} at={0.5 + i * 0.12}>GPU {i + 1}</SvgLabel>
               {[0, 1].map((e) => {
                 const isSel = (i === 0 && e === 0) || (i === 2 && e === 1);
                 return (
                   <React.Fragment key={e}>
                     <SketchRect x={x + 40 + e * 140} y={540} w={120} h={80} rx={7} at={0.7 + i * 0.12 + e * 0.05} dur={0.3} stroke={isSel ? C.green : C.panel} fill={isSel ? C.panel : C.well} fillStyle="solid" strokeWidth={3} seed={3430 + i * 2 + e} />
-                    <SvgLabel x={x + 100 + e * 140} y={578} size={26} color={isSel ? C.green : C.muted}>E{e + 1}</SvgLabel>
+                    <SvgLabel x={x + 100 + e * 140} y={578} size={26} color={isSel ? C.green : C.muted} at={0.7 + i * 0.12 + e * 0.05}>E{e + 1}</SvgLabel>
                   </React.Fragment>
                 );
               })}
