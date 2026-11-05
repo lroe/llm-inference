@@ -46,28 +46,28 @@ export const ScenePromptOrder: React.FC<{durationInFrames: number}> = ({duration
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SketchRect x={420} y={300} w={760} h={460} rx={12} at={0.2} dur={0.5} stroke={C.fg} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4801} />
-        <SketchRect x={460} y={336} w={680} h={76} rx={8} at={0.8} dur={0.4} stroke={C.red} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4803} />
-        <SvgLabel x={800} y={374} size={32} color={C.red} at={0.8}>timestamp 10:42</SvgLabel>
-        <SketchLine x1={480} y1={352} x2={740} y2={396} at={5.2} dur={0.25} stroke={C.red} strokeWidth={6} seed={4805} />
-        <SketchLine x1={740} y1={352} x2={480} y2={396} at={5.25} dur={0.25} stroke={C.red} strokeWidth={6} seed={4807} />
+        <SketchRect x={420} y={300} w={760} h={460} rx={12} at={0.3} dur={0.5} stroke={C.fg} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4801} />
+        <SketchRect x={460} y={336} w={680} h={76} rx={8} at={7.2} dur={0.4} stroke={C.red} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4803} />
+        <SvgLabel x={800} y={374} size={32} color={C.red} at={7.2}>timestamp 10:42</SvgLabel>
+        <SketchLine x1={480} y1={352} x2={740} y2={396} at={7.8} dur={0.25} stroke={C.red} strokeWidth={6} seed={4805} />
+        <SketchLine x1={740} y1={352} x2={480} y2={396} at={7.85} dur={0.25} stroke={C.red} strokeWidth={6} seed={4807} />
 
-        <SketchRect x={460} y={444} w={680} h={90} rx={8} at={1.4} dur={0.4} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4811} />
-        <SvgLabel x={800} y={489} size={32} color={C.green} at={1.4}>system prompt</SvgLabel>
-        <SketchRect x={460} y={556} w={680} h={80} rx={8} at={2.0} dur={0.4} stroke={C.yellow} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4813} />
-        <SvgLabel x={800} y={596} size={30} color={C.yellow} at={2.0}>user turn</SvgLabel>
-        <SketchRect x={460} y={658} w={680} h={64} rx={8} at={2.5} dur={0.4} stroke={C.orange} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4815} />
-        <SvgLabel x={800} y={690} size={30} color={C.orange} at={2.5}>question</SvgLabel>
+        <SketchRect x={460} y={444} w={680} h={90} rx={8} at={0.9} dur={0.4} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4811} />
+        <SvgLabel x={800} y={489} size={32} color={C.green} at={0.9}>system prompt</SvgLabel>
+        <SketchRect x={460} y={556} w={680} h={80} rx={8} at={4.9} dur={0.4} stroke={C.yellow} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4813} />
+        <SvgLabel x={800} y={596} size={30} color={C.yellow} at={4.9}>user turn</SvgLabel>
+        <SketchRect x={460} y={658} w={680} h={64} rx={8} at={5.2} dur={0.4} stroke={C.orange} fill={C.well} fillStyle="solid" strokeWidth={3} seed={4815} />
+        <SvgLabel x={800} y={690} size={30} color={C.orange} at={5.2}>question</SvgLabel>
 
-        <SketchPath d="M 420 340 L 396 340 L 396 534 L 420 534" at={3.0} dur={0.4} stroke={C.green} strokeWidth={4} seed={4821} />
-        <SvgLabel x={340} y={437} size={30} color={C.green} rotate={-90} at={3.0}>stable</SvgLabel>
-        <SketchPath d="M 1200 556 L 1224 556 L 1224 722 L 1200 722" at={4.0} dur={0.4} stroke={C.yellow} strokeWidth={4} seed={4823} />
-        <SvgLabel x={1270} y={639} size={30} color={C.yellow} rotate={90} at={4.0}>changes</SvgLabel>
+        <SketchPath d="M 420 444 L 396 444 L 396 534 L 420 534" at={0.9} dur={0.4} stroke={C.green} strokeWidth={4} seed={4821} />
+        <SvgLabel x={340} y={489} size={28} color={C.green} at={0.9}>stable</SvgLabel>
+        <SketchPath d="M 1200 556 L 1224 556 L 1224 722 L 1200 722" at={5.0} dur={0.4} stroke={C.yellow} strokeWidth={4} seed={4823} />
+        <SvgLabel x={1288} y={639} size={28} color={C.yellow} at={5.0}>changes</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
         order matters
       </Label>
-      <Label x={960} y={838} size={36} color={C.red} at={5.6}>
+      <Label x={960} y={838} size={36} color={C.red} at={8.0}>
         timestamp at the top = every request misses
       </Label>
     </SceneShell>

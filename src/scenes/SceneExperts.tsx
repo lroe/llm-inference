@@ -16,7 +16,7 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
         <SketchRect x={870} y={366} w={180} h={74} rx={10} at={0.3} dur={0.4} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3401} />
-        <SvgLabel x={960} y={404} size={30} color={C.purple} at={0.3}>router</SvgLabel>
+        <SvgLabel x={960} y={404} size={30} color={C.purple} at={3.0}>MoE router</SvgLabel>
         <Token x={960} y={308} text="token" size={30} color={C.cyan} fill={C.surface} at={0.8} dur={0.35} />
 
         {gpus.map((x, i) => {
@@ -59,7 +59,7 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
       </Canvas>
 
       <Label x={960} y={232} size={50} color={C.purple} at={0.3}>
-        mixture of experts
+        expert parallelism
       </Label>
     </SceneShell>
   );

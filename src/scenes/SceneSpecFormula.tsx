@@ -24,7 +24,7 @@ export const SceneSpecFormula: React.FC<{durationInFrames: number}> = ({duration
         {[0, 1, 2, 3, 4, 5].map((i) => (
           <SvgLabel key={i} x={x0 + (i + 1) * dx} y={758} size={28} color={C.muted} at={2.0}>{i + 1}</SvgLabel>
         ))}
-        <SvgLabel x={390} y={520} size={28} color={C.muted} rotate={-90} at={0.3}>tokens</SvgLabel>
+        <SvgLabel x={420} y={366} size={28} color={C.muted} at={0.3}>tokens</SvgLabel>
         <SvgLabel x={960} y={796} size={28} color={C.muted} at={0.3}>guesses ahead (K)</SvgLabel>
         <SvgLabel x={900} y={600} size={32} color={C.green} at={2.0}>accepted</SvgLabel>
         <SvgLabel x={1280} y={690} size={30} color={C.orange} at={15.0}>cost</SvgLabel>

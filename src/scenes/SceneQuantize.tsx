@@ -19,8 +19,8 @@ export const SceneQuantize: React.FC<{durationInFrames: number}> = ({durationInF
 
         <SketchRect x={360} y={580} w={900} h={44} rx={6} at={3.2} dur={0.4} stroke={C.orange} fill={C.orange} fillStyle="solid" strokeWidth={3} seed={5001} />
         <SketchRect x={360} y={646} w={450} h={44} rx={6} at={4.0} dur={0.4} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={5003} />
-        <SvgLabel x={960} y={558} size={28} color={C.muted} at={3.2}>weights</SvgLabel>
-        <SvgLabel x={960} y={626} size={28} color={C.muted} at={4.0}>half the bytes</SvgLabel>
+        <SvgLabel x={960} y={548} size={28} color={C.muted} at={3.2}>weights</SvgLabel>
+        <SvgLabel x={960} y={710} size={28} color={C.muted} at={4.0}>half the bytes</SvgLabel>
 
         <SketchRect x={1330} y={580} w={290} h={150} rx={10} at={8.0} dur={0.4} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={3} seed={5011} />
         <SvgLabel x={1475} y={622} size={32} color={C.yellow} at={8.0}>3.14159</SvgLabel>
@@ -33,10 +33,9 @@ export const SceneQuantize: React.FC<{durationInFrames: number}> = ({durationInF
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
         reduce the bytes
       </Label>
-      <Label x={960} y={292} size={40} color={C.yellow} at={5.5}>
+      <Label x={960} y={268} size={40} color={C.yellow} at={5.5}>
         quantization
-      </Label>
-    </SceneShell>
+      </Label>    </SceneShell>
   );
 };
 

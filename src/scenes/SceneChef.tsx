@@ -97,6 +97,10 @@ export const SceneChef: React.FC<{durationInFrames: number}> = ({durationInFrame
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
+  const chopFade = interpolate(frame, [11.6 * 30, 12.0 * 30], [1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   return (
     <SceneShell durationInFrames={durationInFrames} ground={false}>
@@ -156,7 +160,7 @@ export const SceneChef: React.FC<{durationInFrames: number}> = ({durationInFrame
             ))
           : null}
 
-        <Hourglass x={960} y={620} h={96} color={C.red} at={10.05} />
+        <Hourglass x={960} y={620} h={96} color={C.red} at={11.8} />
       </Canvas>
 
       <Label x={370} y={282} size={46} color={C.muted} at={0.35}>
@@ -170,10 +174,10 @@ export const SceneChef: React.FC<{durationInFrames: number}> = ({durationInFrame
         every bite, one lap
       </Label>
 
-      <Label x={370} y={220} size={44} color={C.green} at={10.1}>
+      <Label x={370} y={220} size={44} color={C.green} at={9.95} opacity={chopFade}>
         chop: instant
       </Label>
-      <Label x={960} y={730} size={46} color={C.red} at={10.18}>
+      <Label x={960} y={730} size={46} color={C.red} at={11.85}>
         walking: all day
       </Label>
     </SceneShell>
