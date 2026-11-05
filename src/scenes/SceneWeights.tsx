@@ -72,11 +72,11 @@ export const SceneWeights: React.FC<{durationInFrames: number}> = ({durationInFr
         </g>
 
         <g opacity={serveFade}>
-          <Token x={300} y={784} text="prompt" size={34} color={C.muted} fill={C.surface} at={5.5} dur={0.4} />
-          <SketchArrow x1={380} y1={784} x2={478} y2={784} at={5.6} dur={0.35} color={C.muted} strokeWidth={4} />
-          <SketchArrow x1={1242} y1={784} x2={1360} y2={784} at={6.1} dur={0.35} color={C.green} strokeWidth={4} />
-          <Token x={1460} y={784} text="next" size={34} color={C.green} fill={C.surface} at={6.2} dur={0.4} />
-          <SvgLabel x={920} y={840} size={40} color={C.muted}>again and again</SvgLabel>
+          <Token x={620} y={790} text="prompt" size={34} color={C.muted} fill={C.surface} at={5.5} dur={0.4} />
+          <SketchArrow x1={620} y1={755} x2={620} y2={726} at={5.6} dur={0.35} color={C.muted} strokeWidth={4} />
+          <SketchArrow x1={1120} y1={726} x2={1120} y2={755} at={6.1} dur={0.35} color={C.green} strokeWidth={4} />
+          <Token x={1120} y={790} text="next" size={34} color={C.green} fill={C.surface} at={6.2} dur={0.4} />
+          <SvgLabel x={870} y={850} size={40} color={C.muted}>again and again</SvgLabel>
         </g>
       </Canvas>
 

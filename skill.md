@@ -41,6 +41,7 @@ Generates storyboards, timing sheets, visual scripts, and production prompts mat
 ## 3. Timing, Synchronization & Pacing Rules
 
 * **Spoken-Sync Trigger:** Visual elements draw or pop on the exact syllable they are spoken.
+* **Speech-locked reveals (hard rule):** Every label, value, formula term, or object must be keyed to the word that introduces it, using word-level timestamps — not segment starts. Never reveal a summary or conclusion before its sentence is spoken. If one line introduces several items, stagger each item onto its noun. If an element is only supporting context, hold it until the first relevant noun, then dim it when the next focus arrives.
 * **Sequential Stagger:** Break complex concepts into discrete visual components introduced one-by-one (e.g., Task 1 $\rightarrow$ Task 2 $\rightarrow$ ATM arm pulls Task 1).
 * **The "Breathing Room" Rule (Crucial):**
   * Never transition immediately after an asset appears.
@@ -63,7 +64,7 @@ Generates storyboards, timing sheets, visual scripts, and production prompts mat
 ## 4. Composition & Negative Space
 
 * **Negative Space:** Keep 60%–80% of the canvas empty at all times.
-* **Groundline / Baseline:** Anchor figures and buildings to an uninterrupted bottom horizontal guideline.
+* **Groundline / Baseline:** Anchor figures and buildings to an uninterrupted bottom horizontal guideline **only when the scene needs a physical floor**. Do not draw a decorative groundline across every scene; it competes with lower-third labels and adds visual noise.
 * **Focal Point Isolation:** Keep **1 active focus zone per beat (left, center, or right)**. Do not animate multiple unrelated quadrants simultaneously.
 * **One focal zone at a time (hard rule):** The eye can only lock onto one new thing at a time. Never reveal two new visuals in separate screen regions on the same beat. Sequence them: let the first draw, land, and be readable; then reveal the second. As a working minimum, separate cross-screen reveals by **0.8–1.0 s**. If the two items must be compared, reveal them one at a time, then hold both together and connect them with a single arrow, bracket, or shared label. If that still creates two competing focal points, remove one item. The same applies to text: do not pop two unrelated labels in different corners at once.
 * **Transitions:** Short fade through the Dracula background `#282A36` (4–6 frames), lateral pan along the groundline, or sudden clear-to-dark. No left-to-right wipes, flashy zooms, or rotations.

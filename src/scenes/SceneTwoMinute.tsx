@@ -2,7 +2,7 @@ import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {C} from '../theme';
 import {Canvas, SceneShell} from '../components/SceneShell';
-import {Label, SketchArrow, SketchCircle, SketchLine, SketchRect} from '../components/Sketch';
+import {SketchArrow, SketchCircle, SketchLine, SketchRect} from '../components/Sketch';
 import {Chip, MemoryStack, SvgLabel} from '../components/Objects';
 
 export const SceneTwoMinute: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
@@ -24,14 +24,6 @@ export const SceneTwoMinute: React.FC<{durationInFrames: number}> = ({durationIn
           <Stopwatch x={960} y={545} r={148} at={6.4} />
         </g>
       </Canvas>
-      <div style={{opacity: stopFade}}>
-        <Label x={960} y={806} size={54} color={C.green} at={6.9} font="marker" weight={700}>
-          2-minute test
-        </Label>
-      </div>
-      <Label x={960} y={250} size={52} color={C.fg} at={0.3}>
-        where is the time?
-      </Label>
     </SceneShell>
   );
 };

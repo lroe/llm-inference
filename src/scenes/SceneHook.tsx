@@ -15,11 +15,15 @@ export const SceneHook: React.FC<{durationInFrames: number}> = ({durationInFrame
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
+  const chipFade = interpolate(frame, [2.4 * 30, 3.0 * 30], [1, 0], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <g opacity={mainFade}>
+        <g opacity={mainFade * chipFade}>
           <Chip x={420} y={258} size={300} label="GPU" color={C.cyan} at={0.15} dur={1.1} active />
 
           <g transform="rotate(7 760 620)">
@@ -27,7 +31,9 @@ export const SceneHook: React.FC<{durationInFrames: number}> = ({durationInFrame
             <SketchCircle cx={674} cy={646} r={9} at={1.2} dur={0.3} stroke={C.orange} strokeWidth={3.5} seed={602} />
             <SvgLabel x={790} y={656} size={54} color={C.orange} at={1.2}>$ 899</SvgLabel>
           </g>
+        </g>
 
+        <g opacity={mainFade}>
           <SketchRect x={1110} y={268} w={620} h={510} rx={14} at={2.75} dur={0.65} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={605} />
           <Gauge x={1420} y={470} r={168} value={0.95} label="95%" color={C.orange} at={3.05} duration={1.3} size={62} />
           <SketchLine x1={1180} y1={690} x2={1660} y2={690} at={3.5} dur={0.5} stroke={C.panel} strokeWidth={4} seed={607} />
@@ -40,9 +46,6 @@ export const SceneHook: React.FC<{durationInFrames: number}> = ({durationInFrame
       </Canvas>
 
       <div style={{opacity: mainFade}}>
-        <Label x={960} y={790} size={44} color={C.muted} at={2.9}>
-          a very expensive chip
-        </Label>
         <Label x={1420} y={835} size={54} color={C.yellow} at={6.0} font="marker" weight={700}>
           still slow
         </Label>

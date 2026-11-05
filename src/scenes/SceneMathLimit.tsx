@@ -25,9 +25,9 @@ export const SceneMathLimit: React.FC<{durationInFrames: number}> = ({durationIn
           <SvgLabel x={1004} y={450} size={30} color={C.orange} at={2.12}>B</SvgLabel>
           <SvgLabel x={1124} y={450} size={30} color={C.orange} at={2.24}>B</SvgLabel>
 
-          <SketchPath d="M 740 576 L 740 602 L 1180 602 L 1180 576" at={4.0} dur={0.6} stroke={C.cyan} strokeWidth={4} seed={1121} />
-          <SvgLabel x={960} y={650} size={82} color={C.cyan} at={4.0}>b</SvgLabel>
-          <SvgLabel x={960} y={718} size={38} color={C.muted} at={4.2}>bytes per second</SvgLabel>
+          <SketchPath d="M 740 576 L 740 602 L 1180 602 L 1180 576" at={6.2} dur={0.6} stroke={C.cyan} strokeWidth={4} seed={1121} />
+          <SvgLabel x={960} y={650} size={82} color={C.cyan} at={6.2}>b</SvgLabel>
+          <SvgLabel x={960} y={718} size={38} color={C.muted} at={6.4}>bytes per second</SvgLabel>
         </g>
       </Canvas>
       <Label x={960} y={248} size={50} color={C.fg} at={0.3}>
