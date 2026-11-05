@@ -118,7 +118,12 @@ const scenes: Entry[] = [
 
 export const Film: React.FC = () => {
   return (
-    <AbsoluteFill style={{backgroundColor: C.bg}}>
+    <AbsoluteFill
+      style={{
+        backgroundColor: C.bg,
+        translate: '-3px 0px'
+      }}
+    >
       <Audio src={staticFile('audio.wav')} />
       {scenes.map((s) => (
         <Sequence key={s.from} from={s.from} durationInFrames={s.duration} premountFor={30}>
