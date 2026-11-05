@@ -12,6 +12,20 @@ npm run dev -- --port 3200
 The composition is `InferenceOptimization` (1920×1080, 30 fps, 33,842 frames).
 A preview server is currently running at `http://localhost:3200`.
 
+## 2K render in Google Colab
+
+Use [`notebooks/render_2k_colab.ipynb`](notebooks/render_2k_colab.ipynb).
+
+- Mounts Google Drive first and asks for the output folder.
+- Renders **2560×1440** in six muted chunks.
+- Saves each finished chunk to Drive immediately, so disconnects are recoverable.
+- Joins the chunks, muxes `audio.wav`, and saves `inference_optimization_2k.mp4` to Drive.
+- Re-running the render cell skips chunks that are already finished.
+
+Open it directly in Colab:
+
+https://colab.research.google.com/github/lroe/llm-inference/blob/main/notebooks/render_2k_colab.ipynb
+
 ## Project layout
 
 - `audio.wav` — narration master (also available to Remotion via `public/audio.wav`).
