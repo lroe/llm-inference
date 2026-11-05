@@ -1,0 +1,57 @@
+import React from 'react';
+import {C} from '../theme';
+import {Canvas, SceneShell} from '../components/SceneShell';
+import {Label, SketchArrow, SketchLine, SketchRect} from '../components/Sketch';
+import {ChatBubble, SvgLabel, Token} from '../components/Objects';
+
+export const ScenePriorities: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
+  return (
+    <SceneShell durationInFrames={durationInFrames} ground>
+      <Canvas>
+        <SketchRect x={220} y={350} w={430} h={360} rx={14} at={0.2} dur={0.5} stroke={C.cyan} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2801} />
+        <SketchRect x={745} y={350} w={430} h={360} rx={14} at={0.5} dur={0.5} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2803} />
+        <SketchRect x={1270} y={350} w={430} h={360} rx={14} at={0.8} dur={0.5} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2805} />
+
+        {/* chat */}
+        <ChatBubble x={300} y={420} w={270} h={92} at={1.1} color={C.cyan} fill={C.well} tail="left">
+          <SvgLabel x={435} y={466} size={40} color={C.cyan}>hi</SvgLabel>
+        </ChatBubble>
+        <SvgLabel x={435} y={608} size={48} color={C.cyan}>chat</SvgLabel>
+        <SvgLabel x={435} y={666} size={38} color={C.muted}>fast</SvgLabel>
+
+        {/* batch */}
+        <Token x={850} y={445} text="A" size={34} color={C.green} fill={C.well} at={1.6} dur={0.35} />
+        <Token x={960} y={445} text="B" size={34} color={C.green} fill={C.well} at={1.75} dur={0.35} />
+        <Token x={1070} y={445} text="C" size={34} color={C.green} fill={C.well} at={1.9} dur={0.35} />
+        <SvgLabel x={960} y={548} size={64} color={C.green}>$</SvgLabel>
+        <SvgLabel x={960} y={608} size={48} color={C.green}>batch</SvgLabel>
+        <SvgLabel x={960} y={666} size={38} color={C.muted}>cost</SvgLabel>
+
+        {/* agent */}
+        <ChatBubble x={1330} y={380} w={190} h={56} at={2.1} color={C.purple} fill={C.well} tail="left">
+          <SvgLabel x={1425} y={408} size={28} color={C.purple}>1</SvgLabel>
+        </ChatBubble>
+        <ChatBubble x={1400} y={452} w={190} h={56} at={2.3} color={C.purple} fill={C.well} tail="right">
+          <SvgLabel x={1495} y={480} size={28} color={C.purple}>2</SvgLabel>
+        </ChatBubble>
+        <ChatBubble x={1330} y={524} w={190} h={56} at={2.5} color={C.purple} fill={C.well} tail="left">
+          <SvgLabel x={1425} y={552} size={28} color={C.purple}>3</SvgLabel>
+        </ChatBubble>
+        <SketchArrow x1={1520} y1={440} x2={1500} y2={452} at={2.7} dur={0.25} color={C.purple} strokeWidth={3.5} head={10} />
+        <SketchArrow x1={1500} y1={512} x2={1520} y2={524} at={2.85} dur={0.25} color={C.purple} strokeWidth={3.5} head={10} />
+        <SvgLabel x={1485} y={634} size={44} color={C.purple}>agent</SvgLabel>
+        <SvgLabel x={1485} y={690} size={36} color={C.muted}>every step</SvgLabel>
+
+        {/* note */}
+        <SketchRect x={690} y={760} w={540} h={86} rx={10} at={8.6} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2811} />
+        <SvgLabel x={930} y={804} size={42} color={C.yellow}>write it down</SvgLabel>
+        <SketchLine x1={1160} y1={790} x2={1178} y2={808} at={9.0} dur={0.2} stroke={C.green} strokeWidth={5} seed={2813} />
+        <SketchLine x1={1178} y1={808} x2={1214} y2={766} at={9.1} dur={0.3} stroke={C.green} strokeWidth={6} seed={2815} />
+      </Canvas>
+
+      <Label x={960} y={250} size={54} color={C.fg} at={0.35}>
+        who is it for?
+      </Label>
+    </SceneShell>
+  );
+};
