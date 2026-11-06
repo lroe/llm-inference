@@ -13,7 +13,9 @@ export const SceneExample: React.FC<{durationInFrames: number}> = ({durationInFr
 
         <SvgLabel x={820} y={326} size={56} color={C.fg} at={0.3}>10B weights</SvgLabel>
         <SvgLabel x={820} y={410} size={56} color={C.orange} at={0.8}>= 20 GB</SvgLabel>
-        <SvgLabel x={820} y={496} size={50} color={C.muted} at={1.4}>2000 GB/s ÷ 20 GB</SvgLabel>
+        <SketchRect x={480} y={466} w={300} h={60} rx={10} at={3.5} dur={0.35} stroke={C.orange} fill={C.surface} fillStyle="solid" strokeWidth={3.5} seed={1202} />
+        <SvgLabel x={630} y={496} size={42} color={C.orange} at={3.5}>2000 GB/s</SvgLabel>
+        <SvgLabel x={940} y={496} size={50} color={C.muted} at={3.7}>÷ 20 GB</SvgLabel>
         <SketchRect x={470} y={532} w={700} h={92} rx={10} at={5.95} dur={0.4} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={4} seed={1203} />
         <SvgLabel x={820} y={580} size={62} color={C.green} at={5.8}>= 100 tokens/s</SvgLabel>
 

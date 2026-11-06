@@ -34,7 +34,7 @@ export const SceneKernels: React.FC<{durationInFrames: number}> = ({durationInFr
         <SvgLabel x={1200} y={852} size={30} color={C.red} at={35.0}>gaps = waiting for orders</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.cyan} at={0.3}>
-        hundreds of kernels
+        5) kernels & graphs
       </Label>
     </SceneShell>
   );

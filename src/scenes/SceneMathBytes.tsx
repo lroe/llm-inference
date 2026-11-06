@@ -1,7 +1,7 @@
 import React from 'react';
 import {C} from '../theme';
 import {Canvas, SceneShell} from '../components/SceneShell';
-import {Label, SketchArrow, SketchRect} from '../components/Sketch';
+import {SketchArrow, SketchRect} from '../components/Sketch';
 import {SvgLabel} from '../components/Objects';
 
 export const SceneMathBytes: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
@@ -20,9 +20,6 @@ export const SceneMathBytes: React.FC<{durationInFrames: number}> = ({durationIn
         <SvgLabel x={880} y={594} size={64} color={C.orange} anchor="start" at={2.2}>= 2N GB</SvgLabel>
         <SvgLabel x={1240} y={594} size={38} color={C.muted} anchor="start" at={2.2}>per token</SvgLabel>
       </Canvas>
-      <Label x={960} y={690} size={46} color={C.yellow} at={4.0}>
-        memory traffic per token
-      </Label>
     </SceneShell>
   );
 };

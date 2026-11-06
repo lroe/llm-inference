@@ -36,7 +36,7 @@ export const ScenePrefix: React.FC<{durationInFrames: number}> = ({durationInFra
         <SvgLabel x={940} y={712} size={38} color={C.green} at={15.0}>cache hit</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.cyan} at={0.3}>
-        prefix cache
+        2) prefix cache
       </Label>
     </SceneShell>
   );

@@ -64,7 +64,7 @@ export const ScenePipeline: React.FC<{durationInFrames: number}> = ({durationInF
       </Canvas>
 
       <Label x={960} y={252} size={52} color={C.cyan} at={0.3}>
-        pipeline parallelism
+        2) pipeline parallelism
       </Label>
     </SceneShell>
   );

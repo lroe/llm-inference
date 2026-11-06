@@ -28,19 +28,19 @@ export const ScenePriorities: React.FC<{durationInFrames: number}> = ({durationI
         <SvgLabel x={960} y={666} size={38} color={C.muted} at={2.4}>cost</SvgLabel>
 
         {/* agent */}
-        <ChatBubble x={1330} y={380} w={190} h={56} at={4.0} color={C.purple} fill={C.well} tail="left">
-          <SvgLabel x={1425} y={408} size={28} color={C.purple} at={4.0}>1</SvgLabel>
+        <ChatBubble x={1330} y={370} w={190} h={56} at={4.0} color={C.purple} fill={C.well} tail="left">
+          <SvgLabel x={1425} y={398} size={28} color={C.purple} at={4.0}>1</SvgLabel>
         </ChatBubble>
-        <ChatBubble x={1400} y={452} w={190} h={56} at={4.2} color={C.purple} fill={C.well} tail="right">
-          <SvgLabel x={1495} y={480} size={28} color={C.purple} at={4.2}>2</SvgLabel>
+        <ChatBubble x={1330} y={452} w={190} h={56} at={4.2} color={C.purple} fill={C.well} tail="right">
+          <SvgLabel x={1425} y={480} size={28} color={C.purple} at={4.2}>2</SvgLabel>
         </ChatBubble>
-        <ChatBubble x={1330} y={524} w={190} h={56} at={4.4} color={C.purple} fill={C.well} tail="left">
-          <SvgLabel x={1425} y={552} size={28} color={C.purple} at={4.4}>3</SvgLabel>
+        <ChatBubble x={1330} y={534} w={190} h={56} at={4.4} color={C.purple} fill={C.well} tail="left">
+          <SvgLabel x={1425} y={562} size={28} color={C.purple} at={4.4}>3</SvgLabel>
         </ChatBubble>
-        <SketchArrow x1={1520} y1={440} x2={1500} y2={452} at={4.2} dur={0.25} color={C.purple} strokeWidth={3.5} head={10} />
-        <SketchArrow x1={1500} y1={512} x2={1520} y2={524} at={4.4} dur={0.25} color={C.purple} strokeWidth={3.5} head={10} />
-        <SvgLabel x={1485} y={634} size={44} color={C.purple} at={4.4}>agent</SvgLabel>
-        <SvgLabel x={1485} y={690} size={36} color={C.muted} at={4.6}>every step</SvgLabel>
+        <SketchArrow x1={1425} y1={426} x2={1425} y2={452} at={4.2} dur={0.2} color={C.purple} strokeWidth={5} head={12} />
+        <SketchArrow x1={1425} y1={508} x2={1425} y2={534} at={4.4} dur={0.2} color={C.purple} strokeWidth={5} head={12} />
+        <SvgLabel x={1490} y={634} size={44} color={C.purple} at={4.4}>agent</SvgLabel>
+        <SvgLabel x={1490} y={690} size={36} color={C.muted} at={4.6}>every step</SvgLabel>
 
         {/* note */}
         <SketchRect x={690} y={760} w={540} h={86} rx={10} at={8.6} dur={0.4} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={2811} />

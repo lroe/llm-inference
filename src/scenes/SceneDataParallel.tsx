@@ -60,7 +60,7 @@ export const SceneDataParallel: React.FC<{durationInFrames: number}> = ({duratio
       </Canvas>
 
       <Label x={960} y={222} size={50} color={C.cyan} at={0.3}>
-        data parallelism
+        3) data parallelism
       </Label>
     </SceneShell>
   );

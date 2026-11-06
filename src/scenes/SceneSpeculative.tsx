@@ -41,7 +41,7 @@ export const SceneSpeculative: React.FC<{durationInFrames: number}> = ({duration
         <SvgLabel x={1640} y={858} size={28} color={C.muted} at={12.6}>head chef</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.cyan} at={0.3}>
-        speculative decoding
+        4) speculative decoding
       </Label>
     </SceneShell>
   );

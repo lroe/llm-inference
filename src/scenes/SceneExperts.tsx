@@ -18,6 +18,7 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
         <SketchRect x={870} y={366} w={180} h={74} rx={10} at={0.3} dur={0.4} stroke={C.purple} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={3401} />
         <SvgLabel x={960} y={404} size={30} color={C.purple} at={3.0}>MoE router</SvgLabel>
         <Token x={960} y={308} text="token" size={30} color={C.cyan} fill={C.surface} at={0.8} dur={0.35} />
+        <SketchArrow x1={960} y1={336} x2={960} y2={362} at={2.0} dur={0.35} color={C.cyan} strokeWidth={4} />
 
         {gpus.map((x, i) => {
           const hot = selected.includes(i);
@@ -59,7 +60,7 @@ export const SceneExperts: React.FC<{durationInFrames: number}> = ({durationInFr
       </Canvas>
 
       <Label x={960} y={232} size={50} color={C.purple} at={0.3}>
-        expert parallelism
+        4) expert parallelism
       </Label>
     </SceneShell>
   );

@@ -23,6 +23,7 @@ Generates storyboards, timing sheets, visual scripts, and production prompts mat
   * Placement: Positioned directly above, below, or adjacent to the associated visual anchor.
   * **No low-contrast text:** Secondary labels, eyebrows, and subtitles must stay readable on dark: Dracula foreground (`#F8F8F2`) or lavender-grey (`#B8B9C5`). Never use Dracula comment (`#6272A4`) or washed-out grey for text; it disappears on projectors.
   * **Horizontal labels only:** Never rotate text sideways or vertically. If a label does not fit horizontally, shorten it, move it, or cut it.
+  * **Use the spoken ordinal:** When the narration enumerates rules, steps, or strategies (“rule two”, “step four”), put that number in the heading — `2) find the equation`, `4) speculative decoding`, `1) tensor parallelism`. Do not make the viewer infer the number from the sequence.
   * **No top-left scene headings:** Do not repeat the narration as a title + subtitle at the top of content scenes. The narration carries the sentence; the diagram carries short functional labels only. This avoids the “read top-left, then look center” eye ping-pong.
   * **Chapter cards are the only exception:** a chapter number + a single motif may be used as a full-screen transition. Keep them sparse and never add a paragraph.
   *

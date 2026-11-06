@@ -27,7 +27,7 @@ export const SceneTradeoffs: React.FC<{durationInFrames: number}> = ({durationIn
         <SvgLabel x={960} y={792} size={42} color={C.red} at={15.4}>LOSS</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
-        measure both sides
+        3) measure both sides
       </Label>
     </SceneShell>
   );
@@ -55,7 +55,7 @@ export const SceneLog: React.FC<{durationInFrames: number}> = ({durationInFrames
         <SvgLabel x={960} y={760} size={28} color={C.muted} at={8.5}>write down why the rest failed</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.yellow} at={0.3} font="marker" weight={700}>
-        keep the log
+        4) keep the log
       </Label>
     </SceneShell>
   );

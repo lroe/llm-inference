@@ -2,7 +2,7 @@ import React from 'react';
 import {C} from '../theme';
 import {Canvas, SceneShell} from '../components/SceneShell';
 import {Label, SketchArrow, SketchCircle, SketchLine, SketchRect} from '../components/Sketch';
-import {KVGrid, QuantBlock, SvgLabel} from '../components/Objects';
+import {KVGrid, QuantBlock, SvgLabel, Token} from '../components/Objects';
 
 export const SceneQuantize: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
   return (
@@ -31,7 +31,7 @@ export const SceneQuantize: React.FC<{durationInFrames: number}> = ({durationInF
         <SvgLabel x={1640} y={788} size={26} color={C.green} at={11.0}>more users</SvgLabel>
       </Canvas>
       <Label x={960} y={220} size={50} color={C.fg} at={0.3}>
-        reduce the bytes
+        3) reduce the bytes
       </Label>
       <Label x={960} y={268} size={40} color={C.yellow} at={5.5}>
         quantization
@@ -51,7 +51,9 @@ export const SceneSlowPath: React.FC<{durationInFrames: number}> = ({durationInF
 
         <SketchRect x={1040} y={340} w={620} h={340} rx={12} at={5.0} dur={0.5} stroke={C.yellow} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={5111} />
         <SvgLabel x={1350} y={400} size={36} color={C.yellow} at={5.0}>accuracy check</SvgLabel>
-        <SvgLabel x={1350} y={470} size={46} color={C.yellow} at={5.2}>?</SvgLabel>
+        <Token x={1240} y={500} text="A" size={30} color={C.yellow} fill={C.well} at={5.2} dur={0.35} />
+        <Token x={1460} y={500} text="B" size={30} color={C.yellow} fill={C.well} at={5.4} dur={0.35} />
+        <SvgLabel x={1350} y={500} size={50} color={C.yellow} at={5.3}>=</SvgLabel>
         <SketchLine x1={1120} y1={560} x2={1580} y2={560} at={6.0} dur={0.4} stroke={C.panel} strokeWidth={3} seed={5121} />
         <SvgLabel x={1350} y={642} size={30} color={C.muted} at={6.0}>same answers?</SvgLabel>
       </Canvas>

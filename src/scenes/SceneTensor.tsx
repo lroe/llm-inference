@@ -49,7 +49,10 @@ export const SceneTensor: React.FC<{durationInFrames: number}> = ({durationInFra
         </g>
       </Canvas>
 
-      <Label x={960} y={260} size={44} color={C.muted} at={5.5} opacity={splitFade}>
+      <Label x={960} y={148} size={50} color={C.cyan} at={6.2}>
+        1) tensor parallelism
+      </Label>
+      <Label x={960} y={260} size={44} color={C.muted} at={6.2} opacity={splitFade}>
         one layer, four slices
       </Label>
     </SceneShell>

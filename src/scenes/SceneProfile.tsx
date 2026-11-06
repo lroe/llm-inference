@@ -32,8 +32,8 @@ export const SceneProfile: React.FC<{durationInFrames: number}> = ({durationInFr
         </g>
       </Canvas>
 
-      <Label x={960} y={240} size={50} color={C.cyan} at={0.3}>
-        profile first
+      <Label x={960} y={240} size={50} color={C.cyan} at={4.0}>
+        1) profile first
       </Label>
     </SceneShell>
   );

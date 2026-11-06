@@ -11,11 +11,11 @@ export const SceneEquation: React.FC<{durationInFrames: number}> = ({durationInF
   return (
     <SceneShell durationInFrames={durationInFrames} ground>
       <Canvas>
-        <SvgLabel x={590} y={300} size={60} color={C.fg} anchor="end" at={0.3}>speed =</SvgLabel>
-        <SvgLabel x={760} y={300} size={60} color={C.cyan} at={0.3}>work</SvgLabel>
-        <SvgLabel x={910} y={300} size={60} color={C.muted} at={0.3}>/</SvgLabel>
-        <SvgLabel x={1050} y={300} size={60} color={C.orange} at={0.3}>time</SvgLabel>
-        <SvgLabel x={960} y={372} size={40} color={C.muted} at={0.4}>work per cycle / time per cycle</SvgLabel>
+        <SvgLabel x={590} y={300} size={60} color={C.fg} anchor="end" at={3.8}>speed =</SvgLabel>
+        <SvgLabel x={760} y={300} size={60} color={C.cyan} at={8.8}>work</SvgLabel>
+        <SvgLabel x={910} y={300} size={60} color={C.muted} at={8.8}>/</SvgLabel>
+        <SvgLabel x={1050} y={300} size={60} color={C.orange} at={8.8}>time</SvgLabel>
+        <SvgLabel x={960} y={372} size={40} color={C.muted} at={8.8}>work per cycle / time per cycle</SvgLabel>
 
         <SketchRect x={330} y={430} w={800} h={330} rx={12} at={1.0} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4101} />
         <SketchLine x1={400} y1={470} x2={400} y2={720} at={1.3} dur={0.4} stroke={C.fg} strokeWidth={4} seed={4103} />
@@ -23,12 +23,12 @@ export const SceneEquation: React.FC<{durationInFrames: number}> = ({durationInF
         <SketchLine x1={500} y1={600} x2={1000} y2={500} at={16.0} dur={0.6} stroke={C.cyan} strokeWidth={4} seed={4111} />
         <SketchCircle cx={500} cy={600} r={9} at={16.2} dur={0.25} stroke={C.cyan} fill={C.cyan} fillStyle="solid" strokeWidth={3} seed={4113} />
         <SketchCircle cx={1000} cy={500} r={9} at={16.3} dur={0.25} stroke={C.cyan} fill={C.cyan} fillStyle="solid" strokeWidth={3} seed={4115} />
-        <SketchCircle cx={750} cy={550} r={11} at={18.2} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4117} />
-        <SvgLabel x={500} y={746} size={30} color={C.muted} at={16.0}>4</SvgLabel>
-        <SvgLabel x={750} y={746} size={30} color={C.green} at={16.0}>6</SvgLabel>
-        <SvgLabel x={1000} y={746} size={30} color={C.muted} at={16.0}>8</SvgLabel>
-        <SvgLabel x={730} y={670} size={30} color={C.green} at={18.2}>predict 6</SvgLabel>
-        <SvgLabel x={860} y={406} size={30} color={C.muted} at={0.4}>speed</SvgLabel>
+        <SketchCircle cx={750} cy={550} r={11} at={19.8} dur={0.3} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={3} seed={4117} />
+        <SvgLabel x={500} y={746} size={30} color={C.muted} at={17.0}>4</SvgLabel>
+        <SvgLabel x={750} y={746} size={30} color={C.green} at={17.0}>6</SvgLabel>
+        <SvgLabel x={1000} y={746} size={30} color={C.muted} at={17.0}>8</SvgLabel>
+        <SvgLabel x={730} y={670} size={30} color={C.green} at={19.9}>predict 6</SvgLabel>
+        <SvgLabel x={860} y={406} size={30} color={C.muted} at={3.8}>speed</SvgLabel>
 
         <SketchRect x={1230} y={430} w={420} h={260} rx={12} at={12.5} dur={0.5} stroke={C.panel} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4121} />
         <SvgLabel x={1440} y={470} size={30} color={C.muted} at={12.5}>one setting at a time</SvgLabel>
@@ -41,7 +41,7 @@ export const SceneEquation: React.FC<{durationInFrames: number}> = ({durationInF
       </Canvas>
 
       <Label x={960} y={210} size={46} color={C.fg} at={0.3}>
-        find the equation
+        2) find the equation
       </Label>
     </SceneShell>
   );

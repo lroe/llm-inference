@@ -1,7 +1,7 @@
 import React from 'react';
 import {C} from '../theme';
 import {Canvas, SceneShell} from '../components/SceneShell';
-import {Label, SketchArrow, SketchCircle, SketchLine, SketchPath, SketchRect} from '../components/Sketch';
+import {Label, SketchArrow, SketchLine, SketchPath, SketchRect} from '../components/Sketch';
 import {Pill, ServerRack, SvgLabel} from '../components/Objects';
 
 export const SceneServer: React.FC<{durationInFrames: number}> = ({durationInFrames}) => {
@@ -16,9 +16,9 @@ export const SceneServer: React.FC<{durationInFrames: number}> = ({durationInFra
         <SvgLabel x={960} y={782} size={36} color={C.green} at={12.5}>several times faster</SvgLabel>
       </Canvas>
       <Label x={960} y={230} size={50} color={C.cyan} at={0.3}>
-        use a real server
+        1) use a real server
       </Label>
-      <Label x={430} y={720} size={34} color={C.red} at={9.4}>
+      <Label x={430} y={630} size={34} color={C.red} at={9.4}>
         handmade loop
       </Label>
     </SceneShell>
@@ -27,12 +27,11 @@ export const SceneServer: React.FC<{durationInFrames: number}> = ({durationInFra
 
 const Loop: React.FC<{x: number; y: number; at: number}> = ({x, y, at}) => (
   <g>
-    <SketchCircle cx={x} cy={y} r={110} at={at} dur={0.5} stroke={C.red} strokeWidth={4} seed={4601} />
-    <SketchPath d={`M ${x - 80} ${y - 50} Q ${x + 30} ${y + 40} ${x - 10} ${y + 90}`} at={at + 0.2} dur={0.4} stroke={C.red} strokeWidth={4} seed={4603} />
-    <SketchPath d={`M ${x + 60} ${y - 80} Q ${x - 30} ${y + 20} ${x + 70} ${y + 60}`} at={at + 0.3} dur={0.4} stroke={C.red} strokeWidth={4} seed={4605} />
-    <SvgLabel x={x} y={y + 8} size={48} color={C.red} at={at + 0.2}>&lt;/&gt;</SvgLabel>
-    <SketchLine x1={x - 70} y1={y - 70} x2={x + 70} y2={y + 70} at={at + 0.7} dur={0.3} stroke={C.red} strokeWidth={6} seed={4607} />
-    <SketchLine x1={x + 70} y1={y - 70} x2={x - 70} y2={y + 70} at={at + 0.75} dur={0.3} stroke={C.red} strokeWidth={6} seed={4609} />
+    <SketchRect x={x - 150} y={y - 110} w={300} h={220} rx={12} at={at} dur={0.5} stroke={C.red} fill={C.surface} fillStyle="solid" strokeWidth={4} seed={4601} />
+    <SvgLabel x={x} y={y - 36} size={46} color={C.red} at={at + 0.2}>&lt;/&gt;</SvgLabel>
+    <SketchPath d={`M ${x - 85} ${y + 36} Q ${x} ${y - 16} ${x + 85} ${y + 36}`} at={at + 0.3} dur={0.45} stroke={C.red} strokeWidth={4} seed={4603} />
+    <SketchLine x1={x + 85} y1={y + 36} x2={x + 58} y2={y + 23} at={at + 0.65} dur={0.2} stroke={C.red} strokeWidth={4} seed={4605} />
+    <SketchLine x1={x + 85} y1={y + 36} x2={x + 60} y2={y + 49} at={at + 0.68} dur={0.2} stroke={C.red} strokeWidth={4} seed={4607} />
   </g>
 );
 
