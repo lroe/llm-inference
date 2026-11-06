@@ -55,7 +55,7 @@ const Stopwatch: React.FC<{x: number; y: number; r: number; at: number}> = ({x, 
     ))}
     <SketchLine x1={x} y1={y} x2={x + 70} y2={y - 94} at={at + 0.5} dur={0.3} stroke={C.green} strokeWidth={5} seed={1817} />
     <SketchCircle cx={x} cy={y} r={7} at={at + 0.55} dur={0.2} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={2} seed={1818} />
-    <SvgLabel x={x} y={y - 6} size={70} color={C.green} at={at + 0.5}>2 min</SvgLabel>
-    <SvgLabel x={x} y={y + 62} size={34} color={C.muted} at={at + 0.6}>to judge it</SvgLabel>
+    <SvgLabel x={x} y={y + 38} size={66} color={C.green} at={at + 0.5}>2 min</SvgLabel>
+    <SvgLabel x={x} y={y + 96} size={28} color={C.muted} at={at + 0.6}>to judge it</SvgLabel>
   </g>
 );

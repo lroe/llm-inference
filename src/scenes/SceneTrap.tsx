@@ -62,9 +62,20 @@ const Calendar: React.FC<{x: number; y: number; at: number}> = ({x, y, at}) => (
 const Stopwatch: React.FC<{x: number; y: number; r: number; at: number}> = ({x, y, r, at}) => (
   <g>
     <SketchCircle cx={x} cy={y} r={r} at={at} dur={0.6} stroke={C.green} fill={C.surface} fillStyle="solid" strokeWidth={5} seed={1641} />
-    <SketchCircle cx={x} cy={y - r - 20} r={18} at={at + 0.3} dur={0.25} stroke={C.green} strokeWidth={4} seed={1643} />
-    <SketchLine x1={x} y1={y - r} x2={x} y2={y - r - 18} at={at + 0.35} dur={0.2} stroke={C.green} strokeWidth={5} seed={1645} />
-    <SvgLabel x={x} y={y - 10} size={82} color={C.green}>30</SvgLabel>
-    <SvgLabel x={x} y={y + 62} size={36} color={C.muted}>seconds</SvgLabel>
+    <SketchCircle cx={x} cy={y} r={r - 13} at={at + 0.12} dur={0.45} stroke={C.panel} strokeWidth={3} seed={1642} />
+    <SketchRect x={x - 18} y={y - r - 34} w={36} h={20} rx={5} at={at + 0.3} dur={0.25} stroke={C.green} fill={C.well} fillStyle="solid" strokeWidth={4} seed={1643} />
+    <SketchLine x1={x} y1={y - r} x2={x} y2={y - r - 14} at={at + 0.35} dur={0.2} stroke={C.green} strokeWidth={5} seed={1645} />
+    {[
+      [x, y - r + 8, x, y - r + 22],
+      [x + r - 8, y, x + r - 22, y],
+      [x, y + r - 8, x, y + r - 22],
+      [x - r + 8, y, x - r + 22, y],
+    ].map(([x1, y1, x2, y2], i) => (
+      <SketchLine key={i} x1={x1} y1={y1} x2={x2} y2={y2} at={at + 0.4 + i * 0.04} dur={0.18} stroke={C.green} strokeWidth={4} seed={1650 + i} />
+    ))}
+    <SketchLine x1={x} y1={y} x2={x + 62} y2={y - 84} at={at + 0.5} dur={0.3} stroke={C.green} strokeWidth={5} seed={1655} />
+    <SketchCircle cx={x} cy={y} r={7} at={at + 0.55} dur={0.2} stroke={C.green} fill={C.green} fillStyle="solid" strokeWidth={2} seed={1656} />
+    <SvgLabel x={x} y={y + 36} size={64} color={C.green} at={at + 0.5}>30</SvgLabel>
+    <SvgLabel x={x} y={y + 90} size={28} color={C.muted} at={at + 0.6}>seconds</SvgLabel>
   </g>
 );
